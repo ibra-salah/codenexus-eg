@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Code Nexus CyberSecurity & IT Services — Penetration testing, vulnerability assessment, network security and IT infrastructure solutions.">
+    <title>CyberSecurity & IT — Code Nexus</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/VL2Q2xgS/Picsart-26-06-05-16-20-01-744.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+    :root {
+        --blue-gradient: linear-gradient(135deg, #0094FF, #0056E0);
+        --orange-gradient: linear-gradient(135deg, #FF8A00, #FF4D00);
+        --black-bg: #000000;
+        --white: #FFFFFF;
+        --card-bg: rgba(20, 20, 30, 0.85);
+        --card-border: rgba(0, 148, 255, 0.2);
+        --card-border-hover: rgba(0, 148, 255, 0.55);
+        --card-shadow: 0 10px 30px rgba(0, 84, 224, 0.25);
+        --transition: all 0.3s ease;
+        --light-blue: #18A0FB;
+        --dark-orange: #FF4D00;
+        --text-muted: #aaaaaa;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body {
+        font-family: 'Rajdhani', sans-serif;
+        background-color: var(--black-bg);
+        color: var(--white);
+        line-height: 1.6;
+        overflow-x: hidden;
+    }
+    h1, h2, h3, h4 { font-family: 'Orbitron', sans-serif; font-weight: 600; letter-spacing: 1px; }
+    img { -webkit-user-drag: none; pointer-events: none; }
+    a img { pointer-events: auto; }
+
+    /* ── Matrix Background ── */
+    .matrix-bg {
+        position: fixed; top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: -2; opacity: 0.18; pointer-events: none;
+    }
+    .matrix-overlay {
+        position: fixed; top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: linear-gradient(135deg, rgba(0,84,224,0.04) 0%, rgba(10,10,15,0.08) 100%);
+        z-index: -1; pointer-events: none;
+    }
+
+    /* ── Navbar ── */
+    .navbar {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%;
+        background: rgba(8, 8, 14, 0.97);
+        backdrop-filter: blur(12px);
+        padding: 14px 0;
+        z-index: 1000;
+        border-bottom: 1px solid rgba(255,255,255,0.07);
+        transition: var(--transition);
+    }
+    .navbar.scrolled { padding: 9px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.4); }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+    .nav-container { 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center;
+        gap: 20px;
+    }
+
+    .logo { 
+        display: flex; 
+        align-items: center;
+        flex-shrink: 0;
+    }
+    .logo img { 
+        height: 40px; 
+        display: block; 
+        pointer-events: auto;
+        transition: var(--transition);
+    }
+    .logo img:hover {
+        filter: brightness(1.1);
+    }
+
+    .nav-back {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: rgba(255,255,255,0.75);
+        text-decoration: none;
+        font-family: 'Rajdhani', sans-serif;
+        font-weight: 500;
+        font-size: 0.95rem;
+        transition: var(--transition);
+        padding: 8px 16px;
+        border: 1px solid rgba(255,255,255,0.15);
+        border-radius: 8px;
+        white-space: nowrap;
+    }
+    .nav-back:hover { 
+        color: #0094FF; 
+        border-color: #0094FF;
+        background: rgba(0, 148, 255, 0.08);
+        transform: translateX(-2px);
+    }
+    .nav-back i { font-size: 0.85rem; }
+
+    /* ── Hero ── */
+    .page-hero {
+        min-height: 70vh; display: flex; align-items: center; justify-content: center;
+        text-align: center;
+        padding: 120px 0 60px; position: relative; overflow: hidden;
+    }
+    .hero-badge {
+        display: inline-flex; align-items: center; gap: 8px;
+        background: rgba(0,148,255,0.1); border: 1px solid rgba(0,148,255,0.3);
+        border-radius: 30px; padding: 8px 20px; font-size: 0.85rem;
+        color: var(--light-blue); margin-bottom: 22px;
+        font-family: 'Rajdhani', sans-serif; font-weight: 500;
+        letter-spacing: 1px; text-transform: uppercase;
+        animation: fadeInDown 0.8s ease;
+    }
+    .page-hero h1 {
+        font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 20px;
+        background: var(--blue-gradient); -webkit-background-clip: text;
+        background-clip: text; color: transparent; line-height: 1.15;
+        animation: fadeInUp 0.8s ease 0.1s both;
+    }
+    .page-hero p {
+        font-size: clamp(1rem, 2vw, 1.2rem); color: var(--text-muted);
+        max-width: 620px; margin: 0 auto 36px; line-height: 1.7;
+        animation: fadeInUp 0.8s ease 0.2s both;
+    }
+    .hero-btns { 
+        display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+        animation: fadeInUp 0.8s ease 0.3s both;
+    }
+    .hero-stats {
+        display: flex; justify-content: center; gap: 40px; margin-top: 50px; flex-wrap: wrap;
+        animation: fadeInUp 0.8s ease 0.4s both;
+    }
+    .hero-stat { text-align: center; transition: var(--transition); }
+    .hero-stat:hover { transform: translateY(-5px); }
+    .hero-stat-num {
+        font-family: 'Orbitron', sans-serif; font-size: 2rem; font-weight: 700;
+        background: var(--blue-gradient); -webkit-background-clip: text;
+        background-clip: text; color: transparent; display: block;
+    }
+    .hero-stat-label { font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+
+    /* ── Single Image Showcase ── */
+    .showcase-section {
+        padding: 60px 0;
+    }
+    .showcase-container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    .showcase-frame {
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0, 148, 255, 0.15);
+        border: 1px solid rgba(0, 148, 255, 0.2);
+        position: relative;
+        background: #0a0a14;
+    }
+    .showcase-frame img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        max-height: 500px;
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .showcase-frame:hover img {
+        transform: scale(1.05);
+    }
+    .showcase-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.6), transparent);
+        padding: 40px 20px 20px;
+        text-align: center;
+        transition: var(--transition);
+    }
+    .showcase-frame:hover .showcase-caption {
+        background: linear-gradient(to top, rgba(0, 148, 255, 0.2), rgba(0, 148, 255, 0.1), transparent);
+    }
+    .showcase-caption h3 {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+        color: #fff;
+        font-weight: 700;
+    }
+    .showcase-caption p {
+        font-size: 0.95rem;
+        color: #bbb;
+        line-height: 1.5;
+    }
+
+    /* ── Section divider ── */
+    .section-divider {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--dark-orange), transparent);
+        margin: 0 auto; width: 90%; max-width: 1000px;
+    }
+
+    /* ── Sections ── */
+    section { padding: 70px 0; }
+    .section-title { text-align: center; margin-bottom: 50px; }
+    .section-title h2 {
+        font-size: clamp(1.6rem, 3.5vw, 2.2rem); margin-bottom: 14px;
+        background: var(--blue-gradient); -webkit-background-clip: text;
+        background-clip: text; color: transparent;
+    }
+    .section-title p { font-size: 1.05rem; color: var(--text-muted); max-width: 580px; margin: 0 auto; }
+
+    /* ── Platform Cards ── */
+    .platforms-grid {
+        display: grid; grid-template-columns: repeat(3, 1fr);
+        gap: 22px; align-items: start;
+    }
+    .platform-card {
+        background: var(--card-bg); border: 1px solid var(--card-border);
+        border-radius: 14px; padding: 34px 26px; text-align: center;
+        transition: var(--transition); position: relative; overflow: hidden;
+        will-change: transform;
+    }
+    .platform-card::before {
+        content: ''; position: absolute; top: 0; left: -100%;
+        width: 100%; height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(0,148,255,0.08), transparent);
+        transition: all 0.7s;
+    }
+    .platform-card:hover { transform: translateY(-8px); box-shadow: var(--card-shadow); border-color: var(--card-border-hover); }
+    .platform-card:hover::before { left: 100%; }
+    .platform-icon { font-size: 3rem; margin-bottom: 16px; display: block; }
+    .icon-web     { color: #0094FF; }
+    .icon-net     { color: #54C5F8; }
+    .icon-cloud   { color: #A97BFF; }
+    .platform-card h3 { font-size: 1.25rem; margin-bottom: 10px; color: #fff; }
+    .platform-card p  { color: #aaa; font-size: 0.95rem; line-height: 1.6; }
+    .platform-tags { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-top: 14px; }
+    .tag {
+        background: rgba(0,148,255,0.1); border: 1px solid rgba(0,148,255,0.2);
+        border-radius: 20px; padding: 3px 12px;
+        font-size: 0.76rem; color: var(--light-blue);
+        font-family: 'Rajdhani', sans-serif; font-weight: 500;
+    }
+
+    /* ── Services Grid ── */
+    .services-grid {
+        display: grid; grid-template-columns: repeat(3, 1fr);
+        gap: 22px; align-items: start;
+    }
+    .service-card {
+        background: var(--card-bg); border: 1px solid var(--card-border);
+        border-radius: 12px; padding: 28px 24px;
+        transition: var(--transition); position: relative; overflow: hidden; will-change: transform;
+    }
+    .service-card::before {
+        content: ''; position: absolute; top: 0; left: -100%;
+        width: 100%; height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(0,148,255,0.08), transparent);
+        transition: all 0.7s;
+    }
+    .service-card:hover { transform: translateY(-8px); box-shadow: var(--card-shadow); border-color: var(--card-border-hover); }
+    .service-card:hover::before { left: 100%; }
+    .service-icon {
+        width: 56px; height: 56px;
+        background: rgba(0,148,255,0.1); border: 1px solid rgba(0,148,255,0.25);
+        border-radius: 12px; display: flex; align-items: center;
+        justify-content: center; font-size: 1.5rem;
+        margin-bottom: 18px; color: var(--light-blue);
+    }
+    .service-card h3 { font-size: 1.15rem; margin-bottom: 10px; color: #fff; }
+    .service-card p  { color: #aaa; font-size: 0.93rem; line-height: 1.6; }
+
+    /* ── Tech Stack ── */
+    .tech-grid {
+        display: grid; grid-template-columns: repeat(4, 1fr);
+        gap: 16px; align-items: start;
+    }
+    .tech-card {
+        background: var(--card-bg); border: 1px solid var(--card-border);
+        border-radius: 10px; padding: 22px 18px; text-align: center;
+        transition: var(--transition); will-change: transform;
+    }
+    .tech-card:hover { transform: translateY(-6px); border-color: var(--card-border-hover); box-shadow: var(--card-shadow); }
+    .tech-card i { font-size: 2.2rem; margin-bottom: 10px; display: block; }
+    .tech-card h4 { font-size: 0.95rem; color: #fff; margin-bottom: 4px; }
+    .tech-card p  { font-size: 0.8rem; color: #888; }
+    .icon-kali      { color: #557C94; }
+    .icon-meta      { color: #ff6b6b; }
+    .icon-wire      { color: #61DBFB; }
+    .icon-nmap      { color: #00D084; }
+    .icon-burp      { color: #FF8A00; }
+    .icon-sql       { color: #FFCA28; }
+    .icon-zap       { color: #00BCD4; }
+    .icon-hash      { color: #A97BFF; }
+
+    /* ── Process Steps ── */
+    .process-steps {
+        display: grid; grid-template-columns: repeat(5, 1fr);
+        gap: 0; position: relative;
+    }
+    .process-steps::before {
+        content: ''; position: absolute;
+        top: 32px; left: 10%; right: 10%;
+        height: 2px;
+        background: linear-gradient(90deg, #0094FF, #FF4D00);
+        z-index: 0;
+    }
+    .step { text-align: center; padding: 0 12px; position: relative; z-index: 1; }
+    .step-num {
+        width: 64px; height: 64px; border-radius: 50%;
+        background: var(--blue-gradient);
+        display: flex; align-items: center; justify-content: center;
+        font-family: 'Orbitron', sans-serif; font-size: 1.1rem; font-weight: 700;
+        margin: 0 auto 18px; box-shadow: 0 0 20px rgba(0,148,255,0.4);
+    }
+    .step h4 { font-size: 0.95rem; margin-bottom: 8px; color: #fff; }
+    .step p   { font-size: 0.84rem; color: #999; line-height: 1.5; }
+
+    /* ── FAQ ── */
+    .faq-list { max-width: 800px; margin: 0 auto; }
+    .faq-item {
+        background: var(--card-bg); border: 1px solid var(--card-border);
+        border-radius: 10px; margin-bottom: 12px; overflow: hidden; transition: border-color 0.3s;
+    }
+    .faq-item.open { border-color: rgba(0,148,255,0.45); }
+    .faq-question {
+        display: flex; justify-content: space-between; align-items: center;
+        padding: 18px 22px; cursor: pointer;
+        font-size: 1rem; font-weight: 500; color: #fff;
+        gap: 16px; user-select: none;
+    }
+    .faq-question i { color: var(--light-blue); font-size: 0.9rem; transition: transform 0.3s ease; flex-shrink: 0; }
+    .faq-item.open .faq-question i { transform: rotate(180deg); }
+    .faq-answer {
+        max-height: 0; overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.23,1,0.32,1), padding 0.3s ease;
+        color: #aaa; font-size: 0.95rem; line-height: 1.7; padding: 0 22px;
+    }
+    .faq-item.open .faq-answer { max-height: 300px; padding: 0 22px 18px; }
+
+    /* ── Buttons ── */
+    .btn {
+        display: inline-block; padding: 12px 28px; border-radius: 6px;
+        text-decoration: none; font-family: 'Orbitron', sans-serif;
+        font-weight: 500; font-size: 0.82rem; text-transform: uppercase;
+        letter-spacing: 1px; transition: var(--transition); border: none; cursor: pointer;
+    }
+    .btn-primary  { background: var(--blue-gradient); color: #fff; box-shadow: 0 4px 15px rgba(0,84,224,0.3); }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,84,224,0.5); }
+    .btn-secondary {
+        background: transparent;
+        color: #fff;
+        border: 2px solid rgba(255,255,255,0.6);
+    }
+    .btn-secondary:hover { 
+        background: rgba(255, 255, 255, 0.1);
+        border-color: #0094FF;
+        color: #0094FF;
+    }
+
+    /* ── Scroll reveal ── */
+    .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .reveal.visible { 
+        opacity: 1; 
+        transform: none; 
+    }
+
+    /* ── Animations ── */
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* ── Footer ── */
+    .page-footer {
+        background: rgba(4,4,9,0.97);
+        padding: 40px 0 28px;
+        border-top: 1px solid rgba(255,255,255,0.07);
+        text-align: center;
+        backdrop-filter: blur(10px);
+    }
+    .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 8px;
+    }
+    .footer-logo img {
+        height: 40px;
+        opacity: 0.85;
+        transition: var(--transition);
+    }
+    .footer-logo img:hover {
+        opacity: 1;
+    }
+    .page-footer p { 
+        color: #666; 
+        font-size: 0.85rem;
+        margin: 0;
+    }
+    .page-footer a { 
+        color: #666; 
+        text-decoration: none; 
+        transition: color 0.2s; 
+    }
+    .page-footer a:hover { 
+        color: #0094FF; 
+    }
+
+    /* ── Footer CTA Buttons ── */
+    .footer-cta-btns {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 24px 0 20px;
+    }
+    .footer-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 32px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-family: 'Rajdhani', sans-serif;
+        font-weight: 700;
+        font-size: 1.05rem;
+        text-transform: none;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        border: none;
+        position: relative;
+        overflow: hidden;
+        color: #FFFFFF !important;
+    }
+    .footer-btn::before {
+        content: '';
+        position: absolute;
+        top: 0; left: -100%;
+        width: 100%; height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+        transition: left 0.5s ease;
+    }
+    .footer-btn:hover::before { left: 100%; }
+    .footer-btn-wa {
+        background: #25D366;
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.25);
+    }
+    .footer-btn-wa:hover {
+        background: #20ba5a;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+    }
+    .footer-btn-wa i { font-size: 1rem; }
+    .footer-btn-start {
+        background: #0094FF;
+        box-shadow: 0 6px 20px rgba(0, 148, 255, 0.25);
+    }
+    .footer-btn-start:hover {
+        background: #0076cc;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0, 148, 255, 0.4);
+    }
+    .footer-btn-start i { font-size: 0.9rem; }
+    @media (max-width: 480px) {
+        .footer-cta-btns { flex-direction: column; align-items: center; }
+        .footer-btn { width: 100%; max-width: 280px; justify-content: center; }
+    }
+    .whatsapp-float {
+        position: fixed;
+        bottom: 28px; right: 24px;
+        width: 56px; height: 56px;
+        background: #25D366;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 1.4rem;
+        text-decoration: none;
+        box-shadow: 0 5px 18px rgba(37,211,102,0.45);
+        z-index: 500;
+        transition: var(--transition);
+        animation: waPulse 2.5s infinite;
+    }
+    .whatsapp-float:hover { 
+        transform: scale(1.15);
+        box-shadow: 0 8px 28px rgba(37,211,102,0.6);
+    }
+    @keyframes waPulse {
+        0%,100% { box-shadow: 0 5px 18px rgba(37,211,102,0.45); }
+        50%      { box-shadow: 0 5px 28px rgba(37,211,102,0.75); }
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 1024px) {
+        .platforms-grid { grid-template-columns: repeat(2, 1fr); }
+        .services-grid { grid-template-columns: repeat(2, 1fr); }
+        .tech-grid     { grid-template-columns: repeat(3, 1fr); }
+        .process-steps { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        .process-steps::before { display: none; }
+    }
+    @media (max-width: 767px) {
+        .platforms-grid { grid-template-columns: 1fr; }
+        .services-grid { grid-template-columns: 1fr; }
+        .tech-grid     { grid-template-columns: repeat(2, 1fr); }
+        .process-steps { grid-template-columns: 1fr; }
+        .hero-stats    { gap: 24px; }
+        .page-hero     { padding: 100px 0 50px; }
+        section        { padding: 50px 0; }
+        .showcase-caption h3 { font-size: 1.1rem; }
+        .showcase-caption p { font-size: 0.8rem; }
+        .showcase-caption { padding: 30px 15px 15px; }
+        .nav-container { gap: 10px; }
+        .nav-back { font-size: 0.85rem; padding: 6px 12px; }
+        .footer-content { gap: 15px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.1ms !important; }
+        .reveal { opacity: 1 !important; transform: none !important; }
+    }
+</style>
+</head>
+<body>
+
+<canvas id="matrix" class="matrix-bg" aria-hidden="true"></canvas>
+<div class="matrix-overlay" aria-hidden="true"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="https://i.postimg.cc/3J1QqwvZ/xz.png" alt="Code Nexus" height="40">
+            </a>
+        </div>
+        <a href="index.html" class="nav-back">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+    </div>
+</nav>
+
+<main>
+
+<!-- HERO SECTION -->
+<section class="page-hero">
+    <div class="container">
+        <div class="hero-badge">
+            <i class="fas fa-shield-alt"></i>
+            CyberSecurity & IT
+        </div>
+        <h1>Secure Systems.<br>Protected Data.</h1>
+        <p>From penetration testing to full IT infrastructure management — we identify vulnerabilities, harden your systems, and keep your digital assets secure around the clock.</p>
+        <div class="hero-btns">
+            <a href="index.html#contact" class="btn btn-primary">Start Your Audit</a>
+            <a href="#services" class="btn btn-secondary">View Our Services</a>
+        </div>
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <span class="hero-stat-num">100+</span>
+                <span class="hero-stat-label">Audits Done</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat-num">100%</span>
+                <span class="hero-stat-label">Confidential</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat-num">24/7</span>
+                <span class="hero-stat-label">Monitoring</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- IMAGE SHOWCASE -->
+<section id="showcase" class="showcase-section">
+    <div class="container">
+        <div class="section-title reveal">
+            <h2>Security in Action</h2>
+            <p>A glimpse into the threat landscape we protect you from</p>
+        </div>
+        <div class="showcase-container">
+            <div class="showcase-frame">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1400&q=80" alt="CyberSecurity Operations">
+                <div class="showcase-caption">
+                    <h3>Real-Time Threat Monitoring</h3>
+                    <p>24/7 protection across your entire digital infrastructure</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- PLATFORMS -->
+<section id="platforms">
+    <div class="container">
+        <div class="section-title reveal">
+            <h2>Platforms We Secure</h2>
+            <p>End-to-end protection across web, network, and cloud environments</p>
+        </div>
+        <div class="platforms-grid">
+            <div class="platform-card reveal">
+                <i class="fas fa-globe icon-web"></i>
+                <h3>Web Applications</h3>
+                <p>Full-stack security testing for websites, web apps, and APIs using OWASP methodology and ethical hacking techniques.</p>
+                <div class="platform-tags">
+                    <span class="tag">OWASP</span>
+                    <span class="tag">XSS</span>
+                    <span class="tag">SQLi</span>
+                </div>
+            </div>
+            <div class="platform-card reveal">
+                <i class="fas fa-network-wired icon-net"></i>
+                <h3>Network Infrastructure</h3>
+                <p>Deep inspection and hardening of your internal and external networks, firewalls, VPNs, and wireless systems.</p>
+                <div class="platform-tags">
+                    <span class="tag">Nmap</span>
+                    <span class="tag">Wireshark</span>
+                    <span class="tag">IDS/IPS</span>
+                </div>
+            </div>
+            <div class="platform-card reveal">
+                <i class="fas fa-cloud icon-cloud"></i>
+                <h3>Cloud & APIs</h3>
+                <p>Configuration audits and penetration testing for AWS, Azure, GCP, and REST/GraphQL APIs to prevent data leaks.</p>
+                <div class="platform-tags">
+                    <span class="tag">AWS</span>
+                    <span class="tag">Azure</span>
+                    <span class="tag">API</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SERVICES -->
+<section id="services">
+    <div class="container">
+        <div class="section-title reveal">
+            <h2>What We Offer</h2>
+            <p>Comprehensive cybersecurity services from audit to incident response and beyond</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card reveal">
+                <div class="service-icon"><i class="fas fa-crosshairs"></i></div>
+                <h3>Penetration Testing</h3>
+                <p>Simulated real-world attacks on your web apps, networks, and systems to find vulnerabilities before attackers do.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon"><i class="fas fa-search"></i></div>
+                <h3>Vulnerability Assessment</h3>
+                <p>Systematic scanning and analysis of your entire infrastructure to identify, classify, and prioritize weaknesses.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+                <h3>Network Security</h3>
+                <p>Firewall configuration, intrusion detection, VPN setup, and segmentation to protect from unauthorized access.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+                <h3>Security Audits</h3>
+                <p>In-depth review of your security policies, access controls, configurations, and compliance posture.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon"><i class="fas fa-bolt"></i></div>
+                <h3>Incident Response</h3>
+                <p>Rapid response when a breach occurs — containment, forensic investigation, and full recovery support.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon"><i class="fas fa-server"></i></div>
+                <h3>IT Infrastructure</h3>
+                <p>Design, deployment, and management of secure IT environments — servers, cloud, and endpoint protection.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- TECH STACK -->
+<section id="tech">
+    <div class="container">
+        <div class="section-title reveal">
+            <h2>Tools We Use</h2>
+            <p>Industry-standard security tools trusted by professionals worldwide</p>
+        </div>
+        <div class="tech-grid">
+            <div class="tech-card reveal">
+                <i class="fas fa-terminal icon-kali"></i>
+                <h4>Kali Linux</h4>
+                <p>Pen testing OS</p>
+            </div>
+            <div class="tech-card reveal">
+                <i class="fas fa-spider icon-meta"></i>
+                <h4>Metasploit</h4>
+                <p>Exploit framework</p>
+            </div>
+            <div class="tech-card reveal">
+                <i class="fas fa-wifi icon-wire"></i>
+                <h4>Wireshark</h4>
+                <p>Network analysis</p>
+            </div>
+            <div class="tech-card reveal">
+                <i class="fas fa-search icon-nmap"></i>
+                <h4>Nmap</h4>
+                <p>Network scanner</p>
+            </div>
+            <div class="tech-card reveal">
+                <i class="fas fa-bug icon-burp"></i>
+                <h4>Burp Suite</h4>
+                <p>Web app testing</p>
+            </div>
+            <div class="tech-card reveal">
+                <i class="fas fa-database icon-sql"></i>
+                <h4>SQLMap</h4>
+                <p>SQL injection</p>
+            </div>
+            <div class="tech-card reveal">
+                <i class="fas fa-shield-alt icon-zap"></i>
+                <h4>OWASP ZAP</h4>
+                <p>Security scanning</p>
+            </div>
+            <div class="tech-card reveal">
+                <i class="fas fa-lock icon-hash"></i>
+                <h4>Hashcat</h4>
+                <p>Password auditing</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- PROCESS -->
+<section id="process">
+    <div class="container">
+        <div class="section-title reveal">
+            <h2>Our Process</h2>
+            <p>A structured 5-step methodology from scoping to ongoing support</p>
+        </div>
+        <div class="process-steps">
+            <div class="step reveal">
+                <div class="step-num">01</div>
+                <h4>Scoping</h4>
+                <p>We define the scope, targets, and rules of engagement through a formal agreement.</p>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">02</div>
+                <h4>Reconnaissance</h4>
+                <p>Passive and active information gathering to map the entire attack surface.</p>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">03</div>
+                <h4>Testing</h4>
+                <p>Controlled exploitation of discovered vulnerabilities using ethical hacking techniques.</p>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">04</div>
+                <h4>Reporting</h4>
+                <p>Detailed report with findings, risk ratings, evidence, and clear remediation steps.</p>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">05</div>
+                <h4>Remediation</h4>
+                <p>We help fix the issues, re-test, and provide ongoing support to keep you protected.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- FAQ -->
+<section id="faq">
+    <div class="container">
+        <div class="section-title reveal">
+            <h2>Frequently Asked Questions</h2>
+            <p>Common questions about our cybersecurity and IT services</p>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question">
+                    Is penetration testing legal?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Yes — when conducted with written authorization from the system owner. We always begin with a formal scope agreement that defines the targets, testing boundaries, and rules of engagement. Ethical hacking with proper authorization is fully legal and is standard practice worldwide.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    How long does a penetration test take?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    It depends on scope. A basic web application test typically takes 2–5 days. A full infrastructure assessment can take 1–3 weeks. We provide a clear timeline and milestone plan before starting any engagement.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Will the testing affect my live systems?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    We take every precaution to minimize disruption. Testing is conducted carefully with agreed-upon safe hours, and we coordinate with your team throughout. In most cases, systems continue operating normally during the engagement.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    What does the final report include?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Our reports include an executive summary for stakeholders, a full technical breakdown of all findings, CVSS risk ratings for each vulnerability, proof-of-concept evidence, and step-by-step remediation recommendations. We also offer a debrief call to walk through the findings.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Do you offer ongoing security monitoring?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Yes. Our Enterprise package includes continuous threat monitoring, quarterly assessments, and a dedicated security advisor. We also offer standalone monitoring retainers for businesses that need ongoing protection between formal assessments.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="page-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://i.postimg.cc/3J1QqwvZ/xz.png" alt="Code Nexus" height="40">
+            </div>
+        </div>
+        <div class="footer-cta-btns">
+            <a href="https://wa.me/201097422920?text=Hello%20Code%20Nexus%2C%20I%20would%20like%20to%20request%20this%20service%20and%20learn%20more%20about%20your%20solutions." 
+               class="footer-btn footer-btn-wa" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i>
+                Request This Service
+            </a>
+            <a href="index.html#contact" class="footer-btn footer-btn-start">
+                <i class="fas fa-rocket"></i>
+                Get Started
+            </a>
+        </div>
+        <p>&copy; 2024 Code Nexus. All rights reserved. | <a href="index.html">Back to Home</a></p>
+    </div>
+</footer>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/201097422920" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+    // ── Matrix Background Animation ──
+    const canvas = document.getElementById('matrix');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+    const fontSize = 16;
+    const columns = Math.floor(canvas.width / fontSize);
+    const drops = Array(columns).fill(0);
+
+    function drawMatrix() {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = '#0094FF';
+        ctx.font = `${fontSize}px monospace`;
+        ctx.globalAlpha = 0.3;
+
+        for (let i = 0; i < drops.length; i++) {
+            const char = chars[Math.floor(Math.random() * chars.length)];
+            ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                drops[i] = 0;
+            }
+            drops[i]++;
+        }
+        ctx.globalAlpha = 1;
+    }
+
+    function animateMatrix() {
+        drawMatrix();
+        requestAnimationFrame(animateMatrix);
+    }
+    animateMatrix();
+
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    });
+
+    // ── Navbar Scroll Effect ──
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // ── Scroll Reveal Animation ──
+    const reveals = document.querySelectorAll('.reveal');
+    const revealOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const revealOnScroll = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealOnScroll.unobserve(entry.target);
+            }
+        });
+    }, revealOptions);
+
+    reveals.forEach(reveal => revealOnScroll.observe(reveal));
+
+    // ── FAQ Accordion ──
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            const isOpen = item.classList.contains('open');
+            faqItems.forEach(i => i.classList.remove('open'));
+            if (!isOpen) {
+                item.classList.add('open');
+            }
+        });
+    });
+
+    // ── Smooth Scroll for Anchor Links ──
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href !== '#' && document.querySelector(href)) {
+                e.preventDefault();
+                document.querySelector(href).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
