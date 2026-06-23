@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Code Nexus Egypt Web Development Services — Professional front-end, back-end, and full-stack solutions built to scale. Expert web developers in Mansoura, Egypt.">
-    <meta name="keywords" content="Code Nexus web development, web development Egypt, website development Mansoura, full stack development Egypt, front end development Egypt, back end development Egypt, كود نيكسس تطوير مواقع, تطوير مواقع مصر, برمجة مواقع المنصورة, تصميم مواقع احترافية">
-    <link rel="canonical" href="https://codenexus-eg.com/web-development">
-    <meta property="og:title" content="Web Development — Code Nexus Egypt">
-    <meta property="og:description" content="Professional web development services in Egypt. Front-end, back-end, and full-stack solutions by Code Nexus Egypt team in Mansoura.">
-    <meta property="og:url" content="https://codenexus-eg.com/web-development">
+    <meta name="description" content="Code Nexus Egypt Application Development — Professional iOS, Android & cross-platform mobile app development built to perform. Expert app developers in Mansoura, Egypt.">
+    <meta name="keywords" content="Code Nexus app development, mobile app development Egypt, iOS app development Egypt, Android app development Egypt, cross platform app Mansoura, كود نيكسس تطوير تطبيقات, تطوير تطبيقات مصر, برمجة تطبيقات موبايل, تطبيقات ايفون اندرويد مصر">
+    <link rel="canonical" href="https://codenexus-eg.com/application-development">
+    <meta property="og:title" content="Application Development — Code Nexus Egypt">
+    <meta property="og:description" content="Professional iOS, Android & cross-platform mobile app development in Egypt by Code Nexus Egypt team in Mansoura.">
+    <meta property="og:url" content="https://codenexus-eg.com/application-development">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://i.postimg.cc/VL2Q2xgS/Picsart-26-06-05-16-20-01-744.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Web Development — Code Nexus Egypt">
-    <meta name="twitter:description" content="Professional web development services in Egypt by Code Nexus.">
-    <title>Web Development — Code Nexus Egypt | كود نيكسس</title>
+    <meta name="twitter:title" content="Application Development — Code Nexus Egypt">
+    <meta name="twitter:description" content="Professional mobile app development services in Egypt by Code Nexus.">
+    <title>Application Development — Code Nexus Egypt | كود نيكسس</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://i.postimg.cc/VL2Q2xgS/Picsart-26-06-05-16-20-01-744.png">
@@ -52,30 +52,21 @@
         line-height: 1.6;
         overflow-x: hidden;
     }
-    h1, h2, h3, h4 {
-        font-family: 'Orbitron', sans-serif;
-        font-weight: 600;
-        letter-spacing: 1px;
-    }
+    h1, h2, h3, h4 { font-family: 'Orbitron', sans-serif; font-weight: 600; letter-spacing: 1px; }
     img { -webkit-user-drag: none; pointer-events: none; }
     a img { pointer-events: auto; }
 
     /* ── Matrix Background ── */
     .matrix-bg {
-        position: fixed;
-        top: 0; left: 0;
+        position: fixed; top: 0; left: 0;
         width: 100%; height: 100%;
-        z-index: -2;
-        opacity: 0.18;
-        pointer-events: none;
+        z-index: -2; opacity: 0.18; pointer-events: none;
     }
     .matrix-overlay {
-        position: fixed;
-        top: 0; left: 0;
+        position: fixed; top: 0; left: 0;
         width: 100%; height: 100%;
         background: linear-gradient(135deg, rgba(0,84,224,0.04) 0%, rgba(10,10,15,0.08) 100%);
-        z-index: -1;
-        pointer-events: none;
+        z-index: -1; pointer-events: none;
     }
 
     /* ── Navbar ── */
@@ -137,120 +128,50 @@
     }
     .nav-back i { font-size: 0.85rem; }
 
-    /* ── Hero ── (CENTERED - MODIFIED) */
+    /* ── Hero ── */
     .page-hero {
-        min-height: 70vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        min-height: 70vh; display: flex; align-items: center; justify-content: center;
         text-align: center;
-        padding: 120px 0 60px;
-        position: relative;
-        overflow: hidden;
+        padding: 120px 0 60px; position: relative; overflow: hidden;
     }
     .hero-badge {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        background: rgba(0, 148, 255, 0.1);
-        border: 1px solid rgba(0, 148, 255, 0.3);
-        border-radius: 30px;
-        padding: 8px 20px;
-        font-size: 0.85rem;
-        color: var(--light-blue);
-        margin-bottom: 22px;
-        font-family: 'Rajdhani', sans-serif;
-        font-weight: 500;
-        letter-spacing: 1px;
-        text-transform: uppercase;
+        display: inline-flex; align-items: center; gap: 8px;
+        background: rgba(0,148,255,0.1); border: 1px solid rgba(0,148,255,0.3);
+        border-radius: 30px; padding: 8px 20px; font-size: 0.85rem;
+        color: var(--light-blue); margin-bottom: 22px;
+        font-family: 'Rajdhani', sans-serif; font-weight: 500;
+        letter-spacing: 1px; text-transform: uppercase;
         animation: fadeInDown 0.8s ease;
     }
     .page-hero h1 {
-        font-size: clamp(2rem, 5vw, 3.5rem);
-        margin-bottom: 20px;
-        background: var(--blue-gradient);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        line-height: 1.15;
+        font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 20px;
+        background: var(--blue-gradient); -webkit-background-clip: text;
+        background-clip: text; color: transparent; line-height: 1.15;
         animation: fadeInUp 0.8s ease 0.1s both;
     }
     .page-hero p {
-        font-size: clamp(1rem, 2vw, 1.2rem);
-        color: var(--text-muted);
-        max-width: 620px;
-        margin: 0 auto 36px;
-        line-height: 1.7;
+        font-size: clamp(1rem, 2vw, 1.2rem); color: var(--text-muted);
+        max-width: 620px; margin: 0 auto 36px; line-height: 1.7;
         animation: fadeInUp 0.8s ease 0.2s both;
     }
     .hero-btns { 
-        display: flex; 
-        gap: 16px; 
-        justify-content: center; 
-        flex-wrap: wrap;
+        display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
         animation: fadeInUp 0.8s ease 0.3s both;
     }
     .hero-stats {
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-        margin-top: 50px;
-        flex-wrap: wrap;
+        display: flex; justify-content: center; gap: 40px; margin-top: 50px; flex-wrap: wrap;
         animation: fadeInUp 0.8s ease 0.4s both;
     }
-    .hero-stat { 
-        text-align: center;
-        transition: var(--transition);
-    }
-    .hero-stat:hover {
-        transform: translateY(-5px);
-    }
+    .hero-stat { text-align: center; transition: var(--transition); }
+    .hero-stat:hover { transform: translateY(-5px); }
     .hero-stat-num {
-        font-family: 'Orbitron', sans-serif;
-        font-size: 2rem;
-        font-weight: 700;
-        background: var(--blue-gradient);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        display: block;
+        font-family: 'Orbitron', sans-serif; font-size: 2rem; font-weight: 700;
+        background: var(--blue-gradient); -webkit-background-clip: text;
+        background-clip: text; color: transparent; display: block;
     }
-    .hero-stat-label { 
-        font-size: 0.85rem; 
-        color: var(--text-muted); 
-        text-transform: uppercase; 
-        letter-spacing: 1px; 
-    }
+    .hero-stat-label { font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
 
-    /* ── Section divider ── */
-    .section-divider {
-        height: 1px;
-        background: linear-gradient(90deg, transparent, var(--dark-orange), transparent);
-        margin: 0 auto;
-        width: 90%;
-        max-width: 1000px;
-    }
-
-    /* ── Sections ── */
-    section { padding: 70px 0; }
-    .section-title { text-align: center; margin-bottom: 50px; }
-    .section-title h2 {
-        font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-        margin-bottom: 14px;
-        background: var(--blue-gradient);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-    }
-    .section-title p { 
-        font-size: 1.05rem; 
-        color: var(--text-muted); 
-        max-width: 580px; 
-        margin: 0 auto; 
-    }
-
-    /* ── PORTFOLIO SLIDER STYLES (REDESIGNED) ── */
+    /* ── Portfolio Slider Styles ── */
     .portfolio-section {
         padding: 60px 0;
     }
@@ -315,7 +236,7 @@
         width: 48px;
         height: 48px;
         border-radius: 50%;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: all 0.3s ease-in-out;
         border: 1px solid rgba(0, 148, 255, 0.3);
         backdrop-filter: blur(8px);
         top: 50%;
@@ -325,7 +246,7 @@
     .swiper-button-next:hover, .swiper-button-prev:hover {
         background: #0094FF;
         color: #fff !important;
-        transform: scale(1.1);
+        transform: scale(1.1) translateY(-50%);
         border-color: #0094FF;
         box-shadow: 0 0 20px rgba(0, 148, 255, 0.4);
     }
@@ -351,250 +272,161 @@
         border-radius: 5px;
     }
 
-    /* ── Service Cards ── */
-    .services-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
-        align-items: start;
+    /* ── Section divider ── */
+    .section-divider {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--dark-orange), transparent);
+        margin: 0 auto; width: 90%; max-width: 1000px;
     }
-    .service-card {
-        background: var(--card-bg);
-        border: 1px solid var(--card-border);
-        border-radius: 14px;
-        padding: 32px 28px;
-        transition: var(--transition);
-        position: relative;
-        overflow: hidden;
+
+    /* ── Sections ── */
+    section { padding: 70px 0; }
+    .section-title { text-align: center; margin-bottom: 50px; }
+    .section-title h2 {
+        font-size: clamp(1.6rem, 3.5vw, 2.2rem); margin-bottom: 14px;
+        background: var(--blue-gradient); -webkit-background-clip: text;
+        background-clip: text; color: transparent;
+    }
+    .section-title p { font-size: 1.05rem; color: var(--text-muted); max-width: 580px; margin: 0 auto; }
+
+    /* ── Platform Cards (iOS / Android / Cross) ── */
+    .platforms-grid {
+        display: grid; grid-template-columns: repeat(3, 1fr);
+        gap: 22px; align-items: start;
+    }
+    .platform-card {
+        background: var(--card-bg); border: 1px solid var(--card-border);
+        border-radius: 14px; padding: 34px 26px; text-align: center;
+        transition: var(--transition); position: relative; overflow: hidden;
         will-change: transform;
-        backdrop-filter: blur(10px);
     }
-    .service-card::before {
-        content: '';
-        position: absolute;
-        top: 0; left: -100%;
+    .platform-card::before {
+        content: ''; position: absolute; top: 0; left: -100%;
         width: 100%; height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(0,148,255,0.1), transparent);
+        background: linear-gradient(90deg, transparent, rgba(0,148,255,0.08), transparent);
         transition: all 0.7s;
     }
-    .service-card:hover { 
-        transform: translateY(-10px); 
-        box-shadow: var(--card-shadow); 
-        border-color: var(--card-border-hover);
+    .platform-card:hover { transform: translateY(-8px); box-shadow: var(--card-shadow); border-color: var(--card-border-hover); }
+    .platform-card:hover::before { left: 100%; }
+    .platform-icon { font-size: 3rem; margin-bottom: 16px; display: block; }
+    .icon-ios     { color: #A2AAAD; }
+    .icon-android { color: #3DDC84; }
+    .icon-cross   { color: #54C5F8; }
+    .platform-card h3 { font-size: 1.25rem; margin-bottom: 10px; color: #fff; }
+    .platform-card p  { color: #aaa; font-size: 0.95rem; line-height: 1.6; }
+    .platform-tags { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-top: 14px; }
+    .tag {
+        background: rgba(0,148,255,0.1); border: 1px solid rgba(0,148,255,0.2);
+        border-radius: 20px; padding: 3px 12px;
+        font-size: 0.76rem; color: var(--light-blue);
+        font-family: 'Rajdhani', sans-serif; font-weight: 500;
     }
-    .service-card:hover::before { left: 100%; }
 
+    /* ── Services Grid ── */
+    .services-grid {
+        display: grid; grid-template-columns: repeat(3, 1fr);
+        gap: 22px; align-items: start;
+    }
+    .service-card {
+        background: var(--card-bg); border: 1px solid var(--card-border);
+        border-radius: 12px; padding: 28px 24px;
+        transition: var(--transition); position: relative; overflow: hidden; will-change: transform;
+    }
+    .service-card::before {
+        content: ''; position: absolute; top: 0; left: -100%;
+        width: 100%; height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(0,148,255,0.08), transparent);
+        transition: all 0.7s;
+    }
+    .service-card:hover { transform: translateY(-8px); box-shadow: var(--card-shadow); border-color: var(--card-border-hover); }
+    .service-card:hover::before { left: 100%; }
     .service-icon {
-        width: 60px; height: 60px;
-        background: rgba(0, 148, 255, 0.12);
-        border: 1px solid rgba(0, 148, 255, 0.3);
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.6rem;
-        margin-bottom: 20px;
-        color: var(--light-blue);
-        transition: var(--transition);
+        width: 56px; height: 56px;
+        background: rgba(0,148,255,0.1); border: 1px solid rgba(0,148,255,0.25);
+        border-radius: 12px; display: flex; align-items: center;
+        justify-content: center; font-size: 1.5rem;
+        margin-bottom: 18px; color: var(--light-blue);
     }
-    .service-card:hover .service-icon {
-        background: rgba(0, 148, 255, 0.2);
-        border-color: rgba(0, 148, 255, 0.5);
-        transform: scale(1.1);
-    }
-    .service-card h3 { 
-        font-size: 1.25rem; 
-        margin-bottom: 12px; 
-        color: #fff;
-        font-weight: 700;
-    }
-    .service-card p { 
-        color: #aaa; 
-        font-size: 0.95rem; 
-        line-height: 1.7; 
-    }
+    .service-card h3 { font-size: 1.15rem; margin-bottom: 10px; color: #fff; }
+    .service-card p  { color: #aaa; font-size: 0.93rem; line-height: 1.6; }
 
     /* ── Tech Stack ── */
     .tech-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 18px;
-        align-items: start;
+        display: grid; grid-template-columns: repeat(4, 1fr);
+        gap: 16px; align-items: start;
     }
     .tech-card {
-        background: var(--card-bg);
-        border: 1px solid var(--card-border);
-        border-radius: 12px;
-        padding: 26px 20px;
-        text-align: center;
-        transition: var(--transition);
-        will-change: transform;
-        backdrop-filter: blur(10px);
+        background: var(--card-bg); border: 1px solid var(--card-border);
+        border-radius: 10px; padding: 22px 18px; text-align: center;
+        transition: var(--transition); will-change: transform;
     }
-    .tech-card:hover { 
-        transform: translateY(-8px); 
-        border-color: var(--card-border-hover); 
-        box-shadow: var(--card-shadow);
-    }
-    .tech-card i { 
-        font-size: 2.4rem; 
-        margin-bottom: 14px; 
-        display: block;
-        transition: var(--transition);
-    }
-    .tech-card:hover i {
-        transform: scale(1.15);
-    }
-    .tech-card h4 { 
-        font-size: 0.98rem; 
-        color: #fff; 
-        margin-bottom: 6px;
-        font-weight: 700;
-    }
-    .tech-card p { 
-        font-size: 0.82rem; 
-        color: #888; 
-    }
-    .icon-html  { color: #E44D26; }
-    .icon-css   { color: #264DE4; }
-    .icon-js    { color: #F7DF1E; }
-    .icon-react { color: #61DBFB; }
-    .icon-node  { color: #68A063; }
-    .icon-php   { color: #8892BF; }
-    .icon-mysql { color: #00758F; }
-    .icon-git   { color: #F05032; }
+    .tech-card:hover { transform: translateY(-6px); border-color: var(--card-border-hover); box-shadow: var(--card-shadow); }
+    .tech-card i { font-size: 2.2rem; margin-bottom: 10px; display: block; }
+    .tech-card h4 { font-size: 0.95rem; color: #fff; margin-bottom: 4px; }
+    .tech-card p  { font-size: 0.8rem; color: #888; }
+    .icon-flutter  { color: #54C5F8; }
+    .icon-react-n  { color: #61DBFB; }
+    .icon-swift    { color: #FA7343; }
+    .icon-kotlin   { color: #A97BFF; }
+    .icon-firebase { color: #FFCA28; }
+    .icon-figma    { color: #F24E1E; }
+    .icon-node2    { color: #68A063; }
+    .icon-git      { color: #F05032; }
 
     /* ── Process Steps ── */
     .process-steps {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 0;
-        position: relative;
+        display: grid; grid-template-columns: repeat(5, 1fr);
+        gap: 0; position: relative;
     }
     .process-steps::before {
-        content: '';
-        position: absolute;
-        top: 32px;
-        left: 12%;
-        right: 12%;
+        content: ''; position: absolute;
+        top: 32px; left: 10%; right: 10%;
         height: 2px;
         background: linear-gradient(90deg, #0094FF, #FF4D00);
         z-index: 0;
     }
-    .step {
-        text-align: center;
-        padding: 0 16px;
-        position: relative;
-        z-index: 1;
-    }
+    .step { text-align: center; padding: 0 12px; position: relative; z-index: 1; }
     .step-num {
-        width: 68px; height: 68px;
-        border-radius: 50%;
+        width: 64px; height: 64px; border-radius: 50%;
         background: var(--blue-gradient);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: 'Orbitron', sans-serif;
-        font-size: 1.3rem;
-        font-weight: 700;
-        margin: 0 auto 20px;
-        box-shadow: 0 0 25px rgba(0,148,255,0.4);
-        transition: var(--transition);
+        display: flex; align-items: center; justify-content: center;
+        font-family: 'Orbitron', sans-serif; font-size: 1.1rem; font-weight: 700;
+        margin: 0 auto 18px; box-shadow: 0 0 20px rgba(0,148,255,0.4);
     }
-    .step:hover .step-num {
-        transform: scale(1.1);
-        box-shadow: 0 0 35px rgba(0,148,255,0.6);
-    }
-    .step h4 { 
-        font-size: 1.05rem; 
-        margin-bottom: 10px; 
-        color: #fff;
-        font-weight: 700;
-    }
-    .step p { 
-        font-size: 0.9rem; 
-        color: #999; 
-        line-height: 1.6; 
-    }
+    .step h4 { font-size: 0.95rem; margin-bottom: 8px; color: #fff; }
+    .step p   { font-size: 0.84rem; color: #999; line-height: 1.5; }
 
     /* ── FAQ ── */
     .faq-list { max-width: 800px; margin: 0 auto; }
     .faq-item {
-        background: var(--card-bg);
-        border: 1px solid var(--card-border);
-        border-radius: 12px;
-        margin-bottom: 14px;
-        overflow: hidden;
-        transition: var(--transition);
-        backdrop-filter: blur(10px);
+        background: var(--card-bg); border: 1px solid var(--card-border);
+        border-radius: 10px; margin-bottom: 12px; overflow: hidden; transition: border-color 0.3s;
     }
-    .faq-item.open { 
-        border-color: rgba(0,148,255,0.45);
-        box-shadow: 0 5px 20px rgba(0, 148, 255, 0.1);
-    }
+    .faq-item.open { border-color: rgba(0,148,255,0.45); }
     .faq-question {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 24px;
-        cursor: pointer;
-        font-size: 1.02rem;
-        font-weight: 600;
-        color: #fff;
-        transition: var(--transition);
+        display: flex; justify-content: space-between; align-items: center;
+        padding: 18px 22px; cursor: pointer;
+        font-size: 1rem; font-weight: 500; color: #fff;
+        gap: 16px; user-select: none;
     }
-    .faq-item:hover .faq-question {
-        color: #0094FF;
-    }
-    .faq-question i {
-        transition: transform 0.3s;
-        color: #0094FF;
-    }
-    .faq-item.open .faq-question i {
-        transform: rotate(180deg);
-    }
+    .faq-question i { color: var(--light-blue); font-size: 0.9rem; transition: transform 0.3s ease; flex-shrink: 0; }
+    .faq-item.open .faq-question i { transform: rotate(180deg); }
     .faq-answer {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-        padding: 0 24px;
+        max-height: 0; overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.23,1,0.32,1), padding 0.3s ease;
+        color: #aaa; font-size: 0.95rem; line-height: 1.7; padding: 0 22px;
     }
-    .faq-item.open .faq-answer {
-        max-height: 500px;
-        padding: 0 24px 20px;
-    }
-    .faq-answer p {
-        color: #aaa;
-        font-size: 0.95rem;
-        line-height: 1.7;
-    }
+    .faq-item.open .faq-answer { max-height: 300px; padding: 0 22px 18px; }
 
     /* ── Buttons ── */
     .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 12px 32px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-family: 'Orbitron', sans-serif;
-        font-weight: 600;
-        font-size: 0.85rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        transition: var(--transition);
-        border: none;
-        cursor: pointer;
+        display: inline-block; padding: 12px 28px; border-radius: 6px;
+        text-decoration: none; font-family: 'Orbitron', sans-serif;
+        font-weight: 500; font-size: 0.82rem; text-transform: uppercase;
+        letter-spacing: 1px; transition: var(--transition); border: none; cursor: pointer;
     }
-    .btn-primary {
-        background: var(--blue-gradient);
-        color: #fff;
-        box-shadow: 0 4px 15px rgba(0,84,224,0.3);
-    }
-    .btn-primary:hover { 
-        transform: translateY(-3px); 
-        box-shadow: 0 8px 25px rgba(0,84,224,0.5);
-    }
+    .btn-primary  { background: var(--blue-gradient); color: #fff; box-shadow: 0 4px 15px rgba(0,84,224,0.3); }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,84,224,0.5); }
     .btn-secondary {
         background: transparent;
         color: #fff;
@@ -764,12 +596,14 @@
 
     /* ── Responsive ── */
     @media (max-width: 1024px) {
+        .platforms-grid { grid-template-columns: repeat(2, 1fr); }
         .services-grid { grid-template-columns: repeat(2, 1fr); }
         .tech-grid     { grid-template-columns: repeat(3, 1fr); }
         .process-steps { grid-template-columns: repeat(2, 1fr); gap: 30px; }
         .process-steps::before { display: none; }
     }
     @media (max-width: 767px) {
+        .platforms-grid { grid-template-columns: 1fr; }
         .services-grid { grid-template-columns: 1fr; }
         .tech-grid     { grid-template-columns: repeat(2, 1fr); }
         .process-steps { grid-template-columns: 1fr; }
@@ -815,19 +649,19 @@
 <section class="page-hero">
     <div class="container">
         <div class="hero-badge">
-            <i class="fas fa-code"></i>
-            Web Development
+            <i class="fas fa-mobile-alt"></i>
+            Application Development
         </div>
-        <h1>We Build Websites<br>That Actually Work</h1>
-        <p>From sleek landing pages to complex full-stack platforms — we craft fast, secure, and scalable web solutions tailored to your business goals.</p>
+        <h1>Mobile Apps Built<br>For Performance</h1>
+        <p>From iOS and Android to cross-platform solutions — we develop high-performance mobile applications that engage users and drive business growth.</p>
         <div class="hero-btns">
-            <a href="index.html#contact" class="btn btn-primary">Start Your Project</a>
-            <a href="#portfolio" class="btn btn-secondary">View Portfolio</a>
+            <a href="index.html#contact" class="btn btn-primary">Start Your App</a>
+            <a href="#portfolio" class="btn btn-secondary">View Our Apps</a>
         </div>
         <div class="hero-stats">
             <div class="hero-stat">
                 <span class="hero-stat-num">50+</span>
-                <span class="hero-stat-label">Web Projects</span>
+                <span class="hero-stat-label">Mobile Apps</span>
             </div>
             <div class="hero-stat">
                 <span class="hero-stat-num">100%</span>
@@ -847,8 +681,8 @@
 <section id="portfolio" class="portfolio-section">
     <div class="container">
         <div class="section-title reveal">
-            <h2>Our Portfolio</h2>
-            <p>Explore our premium web development projects and case studies</p>
+            <h2>Our Mobile Applications</h2>
+            <p>Explore our premium mobile app portfolio and case studies</p>
         </div>
         <div class="portfolio-container">
             <div class="swiper-wrapper-outer">
@@ -856,98 +690,66 @@
                     <div class="swiper-wrapper">
                         <!-- Project 1 -->
                         <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/D0gRq1Cg/1.png" alt="BigBook Library">
+                            <img src="https://i.postimg.cc/htwzgXHF/a2.png" alt="Albinti">
                             <div class="slide-caption">
-                                <h3>BigBook Library</h3>
-                                <p>Digital library platform for students and researchers</p>
+                                <h3>Albinti</h3>
+                                <p>Real estate marketplace platform</p>
                             </div>
                         </div>
                         <!-- Project 2 -->
                         <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/kXJ07h4b/2.png" alt="Raad Construction">
+                            <img src="https://i.postimg.cc/cHTdxjrk/a4.png" alt="Duvdu">
                             <div class="slide-caption">
-                                <h3>Raad Construction</h3>
-                                <p>Professional construction & contracting services</p>
+                                <h3>Duvdu</h3>
+                                <p>Social networking & community app</p>
                             </div>
                         </div>
                         <!-- Project 3 -->
                         <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/ncFynwzS/3.png" alt="Kenz El Molook">
+                            <img src="https://i.postimg.cc/hj4q5rpt/a3.png" alt="Discount Emy">
                             <div class="slide-caption">
-                                <h3>Kenz El Molook</h3>
-                                <p>Premium luxury brand showcase</p>
+                                <h3>Discount Emy</h3>
+                                <p>E-commerce & discount platform</p>
                             </div>
                         </div>
                         <!-- Project 4 -->
                         <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/DfPVkK2W/4.png" alt="Commander Diesel">
+                            <img src="https://i.postimg.cc/cJmpw3Zj/a5.png" alt="Govet">
                             <div class="slide-caption">
-                                <h3>Commander Diesel</h3>
-                                <p>Industrial equipment & solutions</p>
+                                <h3>Govet</h3>
+                                <p>Government services application</p>
                             </div>
                         </div>
                         <!-- Project 5 -->
                         <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/VLfxzH69/5.png" alt="Quality Laundry">
+                            <img src="https://i.postimg.cc/fR7pQd32/a6.png" alt="M3lesh">
                             <div class="slide-caption">
-                                <h3>Quality Laundry</h3>
-                                <p>Professional laundry service platform</p>
+                                <h3>M3lesh</h3>
+                                <p>Lifestyle & wellness platform</p>
                             </div>
                         </div>
                         <!-- Project 6 -->
                         <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/RVgjhQ6D/6.png" alt="Dwaiaa">
+                            <img src="https://i.postimg.cc/cHz5BMzP/a7.png" alt="M6lob">
                             <div class="slide-caption">
-                                <h3>Dwaiaa</h3>
-                                <p>Healthcare & wellness solutions</p>
+                                <h3>M6lob</h3>
+                                <p>Request & booking service app</p>
                             </div>
                         </div>
                         <!-- Project 7 -->
                         <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/vH0pTLxF/7.png" alt="أكاديمية الجزري للقرآن">
+                            <img src="https://i.postimg.cc/vZMMnbfh/a8.png" alt="Taskaty">
                             <div class="slide-caption">
-                                <h3>أكاديمية الجزري للقرآن</h3>
-                                <p>Quranic education platform</p>
+                                <h3>Taskaty</h3>
+                                <p>Task management & productivity</p>
                             </div>
                         </div>
                         <!-- Project 8 -->
                         <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/Wb5Qz6qs/8.png" alt="E-Commerce">
+                            <img src="https://i.postimg.cc/q7vTmwm3/a9.png" alt="Teb & Aafya">
                             <div class="slide-caption">
-                                <h3>E-Commerce Platform</h3>
-                                <p>Full-featured online store</p>
-                            </div>
-                        </div>
-                        <!-- Project 9 -->
-                        <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/DwmRXJ1K/9.png" alt="Mihad">
-                            <div class="slide-caption">
-                                <h3>Mihad</h3>
-                                <p>Professional services network</p>
-                            </div>
-                        </div>
-                        <!-- Project 10 -->
-                        <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/Z50XdB6Y/10.png" alt="Spider Media">
-                            <div class="slide-caption">
-                                <h3>Spider Media</h3>
-                                <p>Creative agency & digital marketing</p>
-                            </div>
-                        </div>
-                        <!-- Project 11 -->
-                        <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/RZq2H6w6/11.png" alt="Photography Portfolio">
-                            <div class="slide-caption">
-                                <h3>Photography Portfolio</h3>
-                                <p>Professional photography showcase</p>
-                            </div>
-                        </div>
-                        <!-- Project 12 -->
-                        <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/pLy3FhKp/12.png" alt="Personal Brand Website">
-                            <div class="slide-caption">
-                                <h3>Personal Brand Website</h3>
-                                <p>Executive personal branding</p>
+                                <h3>Teb & Aafya</h3>
+                                <p>Healthcare & wellness platform</p>
                             </div>
                         </div>
                     </div>
@@ -964,43 +766,87 @@
 
 <div class="section-divider"></div>
 
-<!-- SERVICES (What We Offer) -->
+<!-- PLATFORMS -->
+<section id="platforms">
+    <div class="container">
+        <div class="section-title reveal">
+            <h2>Platforms We Support</h2>
+            <p>Native and cross-platform development for all major mobile ecosystems</p>
+        </div>
+        <div class="platforms-grid">
+            <div class="platform-card reveal">
+                <i class="fab fa-apple icon-ios"></i>
+                <h3>iOS Development</h3>
+                <p>Swift-based native apps for iPhone and iPad with full access to Apple's latest APIs and features.</p>
+                <div class="platform-tags">
+                    <span class="tag">Swift</span>
+                    <span class="tag">UIKit</span>
+                    <span class="tag">SwiftUI</span>
+                </div>
+            </div>
+            <div class="platform-card reveal">
+                <i class="fab fa-android icon-android"></i>
+                <h3>Android Development</h3>
+                <p>Kotlin-based native apps for Android devices with Material Design and Google Play integration.</p>
+                <div class="platform-tags">
+                    <span class="tag">Kotlin</span>
+                    <span class="tag">Jetpack</span>
+                    <span class="tag">Material</span>
+                </div>
+            </div>
+            <div class="platform-card reveal">
+                <i class="fas fa-sync-alt icon-cross"></i>
+                <h3>Cross-Platform</h3>
+                <p>Flutter and React Native solutions that share up to 90% of code across platforms, reducing cost without sacrificing quality.</p>
+                <div class="platform-tags">
+                    <span class="tag">Flutter</span>
+                    <span class="tag">React Native</span>
+                    <span class="tag">Dart</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SERVICES -->
 <section id="services">
     <div class="container">
         <div class="section-title reveal">
             <h2>What We Offer</h2>
-            <p>End-to-end web development services from design to deployment</p>
+            <p>Comprehensive mobile app development services from concept to launch and beyond</p>
         </div>
         <div class="services-grid">
             <div class="service-card reveal">
-                <div class="service-icon"><i class="fas fa-desktop"></i></div>
-                <h3>Front-End Development</h3>
-                <p>Pixel-perfect, responsive interfaces built with modern HTML, CSS, and JavaScript frameworks. Fast, accessible, and visually stunning.</p>
-            </div>
-            <div class="service-card reveal">
-                <div class="service-icon"><i class="fas fa-server"></i></div>
-                <h3>Back-End Development</h3>
-                <p>Robust server-side logic, REST APIs, database architecture, and authentication systems that power your application reliably.</p>
-            </div>
-            <div class="service-card reveal">
-                <div class="service-icon"><i class="fas fa-layer-group"></i></div>
-                <h3>Full-Stack Solutions</h3>
-                <p>Complete end-to-end development combining front-end and back-end into a seamless, high-performance web application.</p>
-            </div>
-            <div class="service-card reveal">
-                <div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
-                <h3>E-Commerce Development</h3>
-                <p>Feature-rich online stores with payment integration, inventory management, and an optimized checkout experience.</p>
-            </div>
-            <div class="service-card reveal">
-                <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+                <div class="service-icon"><i class="fas fa-pencil-alt"></i></div>
                 <h3>UI/UX Design</h3>
-                <p>User-centered design that balances aesthetics with usability — wireframes, prototypes, and polished final interfaces.</p>
+                <p>Beautiful, intuitive interfaces designed with user experience at the core. Every pixel serves a purpose.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon"><i class="fas fa-code"></i></div>
+                <h3>Native Development</h3>
+                <p>High-performance iOS and Android apps built with Swift and Kotlin for maximum speed and native feel.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon"><i class="fas fa-sync-alt"></i></div>
+                <h3>Cross-Platform Development</h3>
+                <p>Flutter and React Native solutions that share up to 90% of code across platforms, reducing cost without sacrificing quality.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon"><i class="fas fa-plug"></i></div>
+                <h3>API & Backend Integration</h3>
+                <p>Seamless connection to REST APIs, Firebase, and third-party services including payment gateways, maps, and social login.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon"><i class="fas fa-upload"></i></div>
+                <h3>App Store Submission</h3>
+                <p>We handle the full submission process for both the Apple App Store and Google Play Store — including ASO optimization.</p>
             </div>
             <div class="service-card reveal">
                 <div class="service-icon"><i class="fas fa-tools"></i></div>
-                <h3>Maintenance & Support</h3>
-                <p>Ongoing updates, performance monitoring, security patches, and technical support to keep your site running smoothly.</p>
+                <h3>Maintenance & Updates</h3>
+                <p>Post-launch support, OS compatibility updates, bug fixes, and new feature rollouts to keep your app current and competitive.</p>
             </div>
         </div>
     </div>
@@ -1013,43 +859,43 @@
     <div class="container">
         <div class="section-title reveal">
             <h2>Technologies We Use</h2>
-            <p>Industry-standard tools and frameworks for modern web development</p>
+            <p>Industry-leading tools for building modern, scalable mobile applications</p>
         </div>
         <div class="tech-grid">
             <div class="tech-card reveal">
-                <i class="fab fa-html5 icon-html"></i>
-                <h4>HTML5</h4>
-                <p>Semantic markup</p>
+                <i class="fas fa-mobile icon-flutter"></i>
+                <h4>Flutter</h4>
+                <p>Cross-platform UI</p>
             </div>
             <div class="tech-card reveal">
-                <i class="fab fa-css3-alt icon-css"></i>
-                <h4>CSS3</h4>
-                <p>Modern styling</p>
+                <i class="fab fa-react icon-react-n"></i>
+                <h4>React Native</h4>
+                <p>JS mobile apps</p>
             </div>
             <div class="tech-card reveal">
-                <i class="fab fa-js-square icon-js"></i>
-                <h4>JavaScript</h4>
-                <p>ES6+ / TypeScript</p>
+                <i class="fab fa-apple icon-swift"></i>
+                <h4>Swift</h4>
+                <p>iOS native</p>
             </div>
             <div class="tech-card reveal">
-                <i class="fab fa-react icon-react"></i>
-                <h4>React</h4>
-                <p>UI components</p>
+                <i class="fab fa-android icon-kotlin"></i>
+                <h4>Kotlin</h4>
+                <p>Android native</p>
             </div>
             <div class="tech-card reveal">
-                <i class="fab fa-node-js icon-node"></i>
+                <i class="fas fa-fire icon-firebase"></i>
+                <h4>Firebase</h4>
+                <p>Backend & auth</p>
+            </div>
+            <div class="tech-card reveal">
+                <i class="fab fa-figma icon-figma"></i>
+                <h4>Figma</h4>
+                <p>UI/UX design</p>
+            </div>
+            <div class="tech-card reveal">
+                <i class="fab fa-node-js icon-node2"></i>
                 <h4>Node.js</h4>
-                <p>Server-side JS</p>
-            </div>
-            <div class="tech-card reveal">
-                <i class="fab fa-php icon-php"></i>
-                <h4>PHP</h4>
-                <p>Backend scripting</p>
-            </div>
-            <div class="tech-card reveal">
-                <i class="fas fa-database icon-mysql"></i>
-                <h4>MySQL / MongoDB</h4>
-                <p>Database solutions</p>
+                <p>API development</p>
             </div>
             <div class="tech-card reveal">
                 <i class="fab fa-git-alt icon-git"></i>
@@ -1067,28 +913,33 @@
     <div class="container">
         <div class="section-title reveal">
             <h2>Our Process</h2>
-            <p>A clear, structured workflow from idea to launch</p>
+            <p>A proven 5-step workflow from idea to live app</p>
         </div>
         <div class="process-steps">
             <div class="step reveal">
                 <div class="step-num">01</div>
                 <h4>Discovery</h4>
-                <p>We learn your goals, audience, and requirements through a detailed consultation session.</p>
+                <p>We define your app's goals, target users, and core features through a structured brief.</p>
             </div>
             <div class="step reveal">
                 <div class="step-num">02</div>
                 <h4>Design</h4>
-                <p>Wireframes and UI mockups are crafted and refined until you're fully satisfied.</p>
+                <p>Wireframes and interactive prototypes are created and refined until you're satisfied.</p>
             </div>
             <div class="step reveal">
                 <div class="step-num">03</div>
                 <h4>Development</h4>
-                <p>Clean, optimized code is written following best practices and performance standards.</p>
+                <p>Agile sprints deliver a fully functional app with regular progress updates.</p>
             </div>
             <div class="step reveal">
                 <div class="step-num">04</div>
+                <h4>Testing</h4>
+                <p>Thorough QA across devices and OS versions — performance, security, and UX tested.</p>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">05</div>
                 <h4>Launch</h4>
-                <p>Testing, deployment, and handover — with full support after going live.</p>
+                <p>Store submission, go-live support, and monitoring to ensure a smooth launch.</p>
             </div>
         </div>
     </div>
@@ -1101,52 +952,52 @@
     <div class="container">
         <div class="section-title reveal">
             <h2>Frequently Asked Questions</h2>
-            <p>Get answers to common questions about our web development services</p>
+            <p>Everything you need to know about our mobile app development service</p>
         </div>
         <div class="faq-list">
-            <div class="faq-item reveal">
+            <div class="faq-item">
                 <div class="faq-question">
-                    <span>What's the typical timeline for a web project?</span>
+                    How long does it take to build a mobile app?
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>Project timelines vary based on complexity and scope. A simple landing page typically takes 2-4 weeks, while a full-stack application may take 3-6 months. We provide detailed timelines during the discovery phase.</p>
+                    A simple MVP can be ready in 4–6 weeks. A full-featured professional app typically takes 8–14 weeks, and complex enterprise apps may take 3–6 months. We provide a detailed timeline during the discovery phase.
                 </div>
             </div>
-            <div class="faq-item reveal">
+            <div class="faq-item">
                 <div class="faq-question">
-                    <span>Do you provide ongoing support after launch?</span>
+                    Should I build a native or cross-platform app?
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>Yes, we offer comprehensive maintenance and support packages. This includes security updates, performance optimization, bug fixes, and feature enhancements to keep your site running smoothly.</p>
+                    Cross-platform (Flutter or React Native) is ideal for most businesses — it saves cost and time while delivering near-native performance. Native development is recommended for apps requiring advanced hardware access or peak performance, like games or camera-heavy apps.
                 </div>
             </div>
-            <div class="faq-item reveal">
+            <div class="faq-item">
                 <div class="faq-question">
-                    <span>Can you help with SEO optimization?</span>
+                    Do you handle App Store and Play Store submission?
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>Absolutely. We implement SEO best practices during development, including proper meta tags, structured data, fast loading times, and mobile optimization to ensure your site ranks well in search results.</p>
+                    Yes. We manage the entire submission process for both stores, including preparing screenshots, descriptions, ASO metadata, and handling any review feedback from Apple or Google.
                 </div>
             </div>
-            <div class="faq-item reveal">
+            <div class="faq-item">
                 <div class="faq-question">
-                    <span>What payment methods do you accept?</span>
+                    Will my app work offline?
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>We accept bank transfers, credit cards, and PayPal. For larger projects, we offer flexible payment plans with milestone-based payments to ensure transparency and reduce financial risk.</p>
+                    Yes, if required. We can implement local data caching and offline mode so your users can continue using core features without an internet connection, syncing data when connectivity is restored.
                 </div>
             </div>
-            <div class="faq-item reveal">
+            <div class="faq-item">
                 <div class="faq-question">
-                    <span>Will my site be mobile-responsive?</span>
+                    What happens after the app is launched?
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>Yes, all our websites are built with a mobile-first approach. We test across all devices and screen sizes to ensure a perfect experience on phones, tablets, and desktops.</p>
+                    We provide post-launch support covering bug fixes, OS update compatibility, performance monitoring, and feature enhancements. All packages include a support period, and we offer extended maintenance contracts as well.
                 </div>
             </div>
         </div>
@@ -1179,7 +1030,7 @@
 </footer>
 
 <!-- Floating WhatsApp Button -->
-<a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
+<a href="https://wa.me/201097422920" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
     <i class="fab fa-whatsapp"></i>
 </a>
 
