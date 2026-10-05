@@ -3,29 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#000000">
+    <meta name="color-scheme" content="dark">
     <meta name="description" content="Code Nexus Egypt Web Development Services — Professional front-end, back-end, and full-stack solutions built to scale. Expert web developers in Mansoura, Egypt.">
-    <meta name="keywords" content="Code Nexus web development, web development Egypt, website development Mansoura, full stack development Egypt, front end development Egypt, back end development Egypt, كود نيكسس تطوير مواقع, تطوير مواقع مصر, برمجة مواقع المنصورة, تصميم مواقع احترافية">
     <link rel="canonical" href="https://codenexus-eg.com/web-development">
     <meta property="og:title" content="Web Development — Code Nexus Egypt">
     <meta property="og:description" content="Professional web development services in Egypt. Front-end, back-end, and full-stack solutions by Code Nexus Egypt team in Mansoura.">
     <meta property="og:url" content="https://codenexus-eg.com/web-development">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://i.postimg.cc/VL2Q2xgS/Picsart-26-06-05-16-20-01-744.png">
+    <meta property="og:image" content="https://i.postimg.cc/sXvpKfvN/Picsart-25-11-16-03-03-27-354.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Web Development - Code Nexus Egypt">
+    <meta property="og:site_name" content="Code Nexus">
+    <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://i.postimg.cc/sXvpKfvN/Picsart-25-11-16-03-03-27-354.png">
+    <meta name="twitter:image:alt" content="Web Development - Code Nexus Egypt">
     <meta name="twitter:title" content="Web Development — Code Nexus Egypt">
     <meta name="twitter:description" content="Professional web development services in Egypt by Code Nexus.">
     <title>Web Development — Code Nexus Egypt | كود نيكسس</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://i.postimg.cc/VL2Q2xgS/Picsart-26-06-05-16-20-01-744.png">
+    <link rel="apple-touch-icon" href="https://i.postimg.cc/VL2Q2xgS/Picsart-26-06-05-16-20-01-744.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    <link rel="preconnect" href="https://i.postimg.cc">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <!-- Swiper CSS for Slider -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.css" integrity="sha384-gAPqlBuTCdtVcYt9ocMOYWrnBZ4XSL6q+4eXqwNycOr4iFczhNKtnYhF3NEXJM51" crossorigin="anonymous">
 
 <style>
     :root {
@@ -317,7 +332,6 @@
         border-radius: 50%;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         border: 1px solid rgba(0, 148, 255, 0.3);
-        backdrop-filter: blur(8px);
         top: 50%;
         transform: translateY(-50%);
         margin-top: 0;
@@ -366,8 +380,6 @@
         transition: var(--transition);
         position: relative;
         overflow: hidden;
-        will-change: transform;
-        backdrop-filter: blur(10px);
     }
     .service-card::before {
         content: '';
@@ -428,8 +440,6 @@
         padding: 26px 20px;
         text-align: center;
         transition: var(--transition);
-        will-change: transform;
-        backdrop-filter: blur(10px);
     }
     .tech-card:hover { 
         transform: translateY(-8px); 
@@ -526,7 +536,6 @@
         margin-bottom: 14px;
         overflow: hidden;
         transition: var(--transition);
-        backdrop-filter: blur(10px);
     }
     .faq-item.open { 
         border-color: rgba(0,148,255,0.45);
@@ -646,7 +655,6 @@
         padding: 40px 0 28px;
         border-top: 1px solid rgba(255,255,255,0.07);
         text-align: center;
-        backdrop-filter: blur(10px);
     }
     .footer-content {
         display: flex;
@@ -788,22 +796,152 @@
         *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.1ms !important; }
         .reveal { opacity: 1 !important; transform: none !important; }
     }
+
+/* ── Top contact bar (shared with homepage) ── */
+:root{--topbar-h:34px}
+body{padding-top:var(--topbar-h)}
+.topbar{position:fixed;top:0;left:0;width:100%;height:var(--topbar-h);background:#05050a;border-bottom:1px solid rgba(0,148,255,0.18);z-index:1001;font-size:0.82rem}
+.topbar-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.topbar-info{display:flex;align-items:center;gap:20px;min-width:0}
+.topbar a{color:#bbb;text-decoration:none;transition:color .3s ease;white-space:nowrap}
+.topbar a:hover,.topbar a:focus-visible{color:#0094FF}
+.topbar-item{display:inline-flex;align-items:center;gap:7px}
+.topbar-item i{color:#FF8A00;font-size:0.78rem}
+.topbar-social{display:flex;align-items:center;gap:4px;flex-shrink:0}
+.topbar-social a{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem}
+.topbar-social a:hover{background:rgba(0,148,255,0.15)}
+.navbar{top:var(--topbar-h)}
+section[id]{scroll-margin-top:calc(var(--topbar-h) + 70px)}
+@media (max-width:767.98px){:root{--topbar-h:32px}.topbar-item.tb-loc,.topbar-item.tb-mail{display:none}}
+@media (max-width:575.98px){.topbar{font-size:0.78rem}.topbar-info{gap:10px}.topbar-social{gap:0}.topbar-social a{width:24px;height:24px}}
+/* ── Running-light card border (same effect as homepage) ── */
+@property --cn-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+@keyframes cnBorderSpin{to{--cn-angle:360deg}}
+.service-card,.tech-card,.platform-card,.faq-item{position:relative}
+.service-card::after,.tech-card::after,.platform-card::after,.faq-item::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:2px;pointer-events:none;z-index:3;opacity:0;background:conic-gradient(from var(--cn-angle),transparent 0 62%,rgba(24,160,251,0.15) 70%,#18A0FB 88%,#FF8A00 100%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+.service-card.cn-live::after,.tech-card.cn-live::after,.platform-card.cn-live::after,.faq-item.cn-live::after{opacity:1;animation:cnBorderSpin 4.5s linear infinite}
+@media (prefers-reduced-motion:reduce){.cn-live::after{animation:none!important;opacity:0!important}}
+.faq-question:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:3px}
 </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://codenexus-eg.com/web-development#service",
+      "name": "Web Development",
+      "serviceType": "Web Development",
+      "description": "Code Nexus Egypt Web Development Services — Professional front-end, back-end, and full-stack solutions built to scale. Expert web developers in Mansoura, Egypt.",
+      "url": "https://codenexus-eg.com/web-development",
+      "areaServed": "EG",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://codenexus-eg.com/#organization",
+        "name": "Code Nexus",
+        "url": "https://codenexus-eg.com/",
+        "telephone": "+201097422920",
+        "email": "code.nexus.hack@gmail.com"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://codenexus-eg.com/web-development#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://codenexus-eg.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Web Development",
+          "item": "https://codenexus-eg.com/web-development"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://codenexus-eg.com/web-development#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What's the typical timeline for a web project?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Project timelines vary based on complexity and scope. A simple landing page typically takes 2-4 weeks, while a full-stack application may take 3-6 months. We provide detailed timelines during the discovery phase."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide ongoing support after launch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we offer comprehensive maintenance and support packages. This includes security updates, performance optimization, bug fixes, and feature enhancements to keep your site running smoothly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you help with SEO optimization?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. We implement SEO best practices during development, including proper meta tags, structured data, fast loading times, and mobile optimization to ensure your site ranks well in search results."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What payment methods do you accept?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We accept bank transfers, credit cards, and PayPal. For larger projects, we offer flexible payment plans with milestone-based payments to ensure transparency and reduce financial risk."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will my site be mobile-responsive?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, all our websites are built with a mobile-first approach. We test across all devices and screen sizes to ensure a perfect experience on phones, tablets, and desktops."
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
 </head>
 <body>
 
 <canvas id="matrix" class="matrix-bg" aria-hidden="true"></canvas>
 <div class="matrix-overlay" aria-hidden="true"></div>
 
+<div class="topbar" id="topbar">
+    <div class="container topbar-inner">
+        <div class="topbar-info">
+            <a class="topbar-item" href="tel:+201097422920" aria-label="Call Code Nexus"><i class="fas fa-phone-alt" aria-hidden="true"></i><span>01097422920</span></a>
+            <a class="topbar-item tb-mail" href="mailto:code.nexus.hack@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i><span>code.nexus.hack@gmail.com</span></a>
+            <span class="topbar-item tb-loc"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Mansoura, Dakahlia, Egypt</span></span>
+        </div>
+        <div class="topbar-social">
+            <a href="https://wa.me/201097422920" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/share/18kKSwDE6Z/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/codenexus_eg?igsh=OWhnZTFkeHhmcWQw" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@codenexus_eg?is_from_webapp=1&amp;sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </div>
+</div>
+
 <!-- NAVBAR -->
-<nav class="navbar" id="navbar">
+<nav class="navbar" id="navbar" aria-label="Main navigation">
     <div class="container nav-container">
         <div class="logo">
-            <a href="index.html">
+            <a href="/">
                 <img src="https://i.postimg.cc/3J1QqwvZ/xz.png" alt="Code Nexus" height="40">
             </a>
         </div>
-        <a href="index.html" class="nav-back">
+        <a href="/" class="nav-back">
             <i class="fas fa-arrow-left"></i> Back to Home
         </a>
     </div>
@@ -821,7 +959,7 @@
         <h1>We Build Websites<br>That Actually Work</h1>
         <p>From sleek landing pages to complex full-stack platforms — we craft fast, secure, and scalable web solutions tailored to your business goals.</p>
         <div class="hero-btns">
-            <a href="index.html#contact" class="btn btn-primary">Start Your Project</a>
+            <a href="/#contact" class="btn btn-primary">Start Your Project</a>
             <a href="#portfolio" class="btn btn-secondary">View Portfolio</a>
         </div>
         <div class="hero-stats">
@@ -864,7 +1002,7 @@
                         </div>
                         <!-- Project 2 -->
                         <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/kXJ07h4b/2.png" alt="Raad Construction">
+                            <img loading="lazy" decoding="async" src="https://i.postimg.cc/kXJ07h4b/2.png" alt="Raad Construction">
                             <div class="slide-caption">
                                 <h3>Raad Construction</h3>
                                 <p>Professional construction & contracting services</p>
@@ -872,7 +1010,7 @@
                         </div>
                         <!-- Project 3 -->
                         <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/ncFynwzS/3.png" alt="Kenz El Molook">
+                            <img loading="lazy" decoding="async" src="https://i.postimg.cc/ncFynwzS/3.png" alt="Kenz El Molook">
                             <div class="slide-caption">
                                 <h3>Kenz El Molook</h3>
                                 <p>Premium luxury brand showcase</p>
@@ -880,7 +1018,7 @@
                         </div>
                         <!-- Project 4 -->
                         <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/DfPVkK2W/4.png" alt="Commander Diesel">
+                            <img loading="lazy" decoding="async" src="https://i.postimg.cc/DfPVkK2W/4.png" alt="Commander Diesel">
                             <div class="slide-caption">
                                 <h3>Commander Diesel</h3>
                                 <p>Industrial equipment & solutions</p>
@@ -888,7 +1026,7 @@
                         </div>
                         <!-- Project 5 -->
                         <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/VLfxzH69/5.png" alt="Quality Laundry">
+                            <img loading="lazy" decoding="async" src="https://i.postimg.cc/VLfxzH69/5.png" alt="Quality Laundry">
                             <div class="slide-caption">
                                 <h3>Quality Laundry</h3>
                                 <p>Professional laundry service platform</p>
@@ -896,7 +1034,7 @@
                         </div>
                         <!-- Project 6 -->
                         <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/RVgjhQ6D/6.png" alt="Dwaiaa">
+                            <img loading="lazy" decoding="async" src="https://i.postimg.cc/RVgjhQ6D/6.png" alt="Dwaiaa">
                             <div class="slide-caption">
                                 <h3>Dwaiaa</h3>
                                 <p>Healthcare & wellness solutions</p>
@@ -904,7 +1042,7 @@
                         </div>
                         <!-- Project 7 -->
                         <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/vH0pTLxF/7.png" alt="أكاديمية الجزري للقرآن">
+                            <img loading="lazy" decoding="async" src="https://i.postimg.cc/vH0pTLxF/7.png" alt="أكاديمية الجزري للقرآن">
                             <div class="slide-caption">
                                 <h3>أكاديمية الجزري للقرآن</h3>
                                 <p>Quranic education platform</p>
@@ -912,7 +1050,7 @@
                         </div>
                         <!-- Project 8 -->
                         <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/Wb5Qz6qs/8.png" alt="E-Commerce">
+                            <img loading="lazy" decoding="async" src="https://i.postimg.cc/Wb5Qz6qs/8.png" alt="E-Commerce">
                             <div class="slide-caption">
                                 <h3>E-Commerce Platform</h3>
                                 <p>Full-featured online store</p>
@@ -920,7 +1058,7 @@
                         </div>
                         <!-- Project 9 -->
                         <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/DwmRXJ1K/9.png" alt="Mihad">
+                            <img loading="lazy" decoding="async" src="https://i.postimg.cc/DwmRXJ1K/9.png" alt="Mihad">
                             <div class="slide-caption">
                                 <h3>Mihad</h3>
                                 <p>Professional services network</p>
@@ -928,7 +1066,7 @@
                         </div>
                         <!-- Project 10 -->
                         <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/Z50XdB6Y/10.png" alt="Spider Media">
+                            <img loading="lazy" decoding="async" src="https://i.postimg.cc/Z50XdB6Y/10.png" alt="Spider Media">
                             <div class="slide-caption">
                                 <h3>Spider Media</h3>
                                 <p>Creative agency & digital marketing</p>
@@ -936,7 +1074,7 @@
                         </div>
                         <!-- Project 11 -->
                         <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/RZq2H6w6/11.png" alt="Photography Portfolio">
+                            <img loading="lazy" decoding="async" src="https://i.postimg.cc/RZq2H6w6/11.png" alt="Photography Portfolio">
                             <div class="slide-caption">
                                 <h3>Photography Portfolio</h3>
                                 <p>Professional photography showcase</p>
@@ -944,10 +1082,58 @@
                         </div>
                         <!-- Project 12 -->
                         <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/pLy3FhKp/12.png" alt="Personal Brand Website">
+                            <img loading="lazy" decoding="async" src="https://i.postimg.cc/pLy3FhKp/12.png" alt="Personal Brand Website">
                             <div class="slide-caption">
                                 <h3>Personal Brand Website</h3>
                                 <p>Executive personal branding</p>
+                            </div>
+                        </div>
+                        <!-- Project 13 -->
+                        <div class="swiper-slide">
+                            <img loading="lazy" decoding="async" src="https://i.postimg.cc/jqWjZskN/1.png" alt="ATYAB · Premium Fragrance">
+                            <div class="slide-caption">
+                                <h3>ATYAB · Premium Fragrance</h3>
+                                <p>Premium fragrance storefront with an elegant shopping experience</p>
+                            </div>
+                        </div>
+                        <!-- Project 14 -->
+                        <div class="swiper-slide">
+                            <img loading="lazy" decoding="async" src="https://i.postimg.cc/vDRkv7S8/2.png" alt="EIK · Premium Fashion">
+                            <div class="slide-caption">
+                                <h3>EIK · Premium Fashion</h3>
+                                <p>Premium fashion website with a clean, modern layout</p>
+                            </div>
+                        </div>
+                        <!-- Project 15 -->
+                        <div class="swiper-slide">
+                            <img loading="lazy" decoding="async" src="https://i.postimg.cc/KcKYJZst/3.png" alt="Tulip Flowers">
+                            <div class="slide-caption">
+                                <h3>Tulip Flowers</h3>
+                                <p>Online flower shop with a fresh, easy-to-browse design</p>
+                            </div>
+                        </div>
+                        <!-- Project 16 -->
+                        <div class="swiper-slide">
+                            <img loading="lazy" decoding="async" src="https://i.postimg.cc/bdXWR0Fj/4.png" alt="TOPNOTCH">
+                            <div class="slide-caption">
+                                <h3>TOPNOTCH</h3>
+                                <p>Professional clinic website presenting medical services</p>
+                            </div>
+                        </div>
+                        <!-- Project 17 -->
+                        <div class="swiper-slide">
+                            <img loading="lazy" decoding="async" src="https://i.postimg.cc/WpQ1yQBv/5.png" alt="AURELIA">
+                            <div class="slide-caption">
+                                <h3>AURELIA</h3>
+                                <p>Elegant online store for handbags</p>
+                            </div>
+                        </div>
+                        <!-- Project 18 -->
+                        <div class="swiper-slide">
+                            <img loading="lazy" decoding="async" src="https://i.postimg.cc/zD9GQ9sm/6.png" alt="آسال">
+                            <div class="slide-caption">
+                                <h3 lang="ar">آسال</h3>
+                                <p>Professional recruitment company website</p>
                             </div>
                         </div>
                     </div>
@@ -1018,42 +1204,42 @@
         <div class="tech-grid">
             <div class="tech-card reveal">
                 <i class="fab fa-html5 icon-html"></i>
-                <h4>HTML5</h4>
+                <h4 aria-level="3">HTML5</h4>
                 <p>Semantic markup</p>
             </div>
             <div class="tech-card reveal">
                 <i class="fab fa-css3-alt icon-css"></i>
-                <h4>CSS3</h4>
+                <h4 aria-level="3">CSS3</h4>
                 <p>Modern styling</p>
             </div>
             <div class="tech-card reveal">
                 <i class="fab fa-js-square icon-js"></i>
-                <h4>JavaScript</h4>
+                <h4 aria-level="3">JavaScript</h4>
                 <p>ES6+ / TypeScript</p>
             </div>
             <div class="tech-card reveal">
                 <i class="fab fa-react icon-react"></i>
-                <h4>React</h4>
+                <h4 aria-level="3">React</h4>
                 <p>UI components</p>
             </div>
             <div class="tech-card reveal">
                 <i class="fab fa-node-js icon-node"></i>
-                <h4>Node.js</h4>
+                <h4 aria-level="3">Node.js</h4>
                 <p>Server-side JS</p>
             </div>
             <div class="tech-card reveal">
                 <i class="fab fa-php icon-php"></i>
-                <h4>PHP</h4>
+                <h4 aria-level="3">PHP</h4>
                 <p>Backend scripting</p>
             </div>
             <div class="tech-card reveal">
                 <i class="fas fa-database icon-mysql"></i>
-                <h4>MySQL / MongoDB</h4>
+                <h4 aria-level="3">MySQL / MongoDB</h4>
                 <p>Database solutions</p>
             </div>
             <div class="tech-card reveal">
                 <i class="fab fa-git-alt icon-git"></i>
-                <h4>Git</h4>
+                <h4 aria-level="3">Git</h4>
                 <p>Version control</p>
             </div>
         </div>
@@ -1072,22 +1258,22 @@
         <div class="process-steps">
             <div class="step reveal">
                 <div class="step-num">01</div>
-                <h4>Discovery</h4>
+                <h4 aria-level="3">Discovery</h4>
                 <p>We learn your goals, audience, and requirements through a detailed consultation session.</p>
             </div>
             <div class="step reveal">
                 <div class="step-num">02</div>
-                <h4>Design</h4>
+                <h4 aria-level="3">Design</h4>
                 <p>Wireframes and UI mockups are crafted and refined until you're fully satisfied.</p>
             </div>
             <div class="step reveal">
                 <div class="step-num">03</div>
-                <h4>Development</h4>
+                <h4 aria-level="3">Development</h4>
                 <p>Clean, optimized code is written following best practices and performance standards.</p>
             </div>
             <div class="step reveal">
                 <div class="step-num">04</div>
-                <h4>Launch</h4>
+                <h4 aria-level="3">Launch</h4>
                 <p>Testing, deployment, and handover — with full support after going live.</p>
             </div>
         </div>
@@ -1105,7 +1291,7 @@
         </div>
         <div class="faq-list">
             <div class="faq-item reveal">
-                <div class="faq-question">
+                <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
                     <span>What's the typical timeline for a web project?</span>
                     <i class="fas fa-chevron-down"></i>
                 </div>
@@ -1114,7 +1300,7 @@
                 </div>
             </div>
             <div class="faq-item reveal">
-                <div class="faq-question">
+                <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
                     <span>Do you provide ongoing support after launch?</span>
                     <i class="fas fa-chevron-down"></i>
                 </div>
@@ -1123,7 +1309,7 @@
                 </div>
             </div>
             <div class="faq-item reveal">
-                <div class="faq-question">
+                <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
                     <span>Can you help with SEO optimization?</span>
                     <i class="fas fa-chevron-down"></i>
                 </div>
@@ -1132,7 +1318,7 @@
                 </div>
             </div>
             <div class="faq-item reveal">
-                <div class="faq-question">
+                <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
                     <span>What payment methods do you accept?</span>
                     <i class="fas fa-chevron-down"></i>
                 </div>
@@ -1141,7 +1327,7 @@
                 </div>
             </div>
             <div class="faq-item reveal">
-                <div class="faq-question">
+                <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
                     <span>Will my site be mobile-responsive?</span>
                     <i class="fas fa-chevron-down"></i>
                 </div>
@@ -1164,27 +1350,27 @@
             </div>
         </div>
         <div class="footer-cta-btns">
-            <a href="https://wa.me/201097422920?text=Hello%20Code%20Nexus%2C%20I%20would%20like%20to%20request%20this%20service%20and%20learn%20more%20about%20your%20solutions." 
+            <a href="https://wa.me/201097422920?text=Hello%20Code%20Nexus%2C%20I%20would%20like%20to%20request%20the%20Web%20Development%20service%20and%20learn%20more%20about%20your%20solutions." 
                class="footer-btn footer-btn-wa" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-whatsapp"></i>
                 Request This Service
             </a>
-            <a href="index.html#contact" class="footer-btn footer-btn-start">
+            <a href="/#contact" class="footer-btn footer-btn-start">
                 <i class="fas fa-rocket"></i>
                 Get Started
             </a>
         </div>
-        <p>&copy; 2024 Code Nexus. All rights reserved. | <a href="index.html">Back to Home</a></p>
+        <p>&copy; <span id="year">2026</span> Code Nexus. All rights reserved. | <a href="/">Back to Home</a></p>
     </div>
 </footer>
 
 <!-- Floating WhatsApp Button -->
-<a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
+<a href="https://wa.me/201097422920?text=Hello%20Code%20Nexus%2C%20I%20would%20like%20to%20request%20the%20Web%20Development%20service%20and%20learn%20more%20about%20your%20solutions." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Code Nexus on WhatsApp" title="Chat with us on WhatsApp">
     <i class="fab fa-whatsapp"></i>
 </a>
 
 <!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
 
 <script>
     // ── Matrix Background Animation ──
@@ -1196,7 +1382,7 @@
     const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
     const fontSize = 16;
     const columns = Math.floor(canvas.width / fontSize);
-    const drops = Array(columns).fill(0);
+    let drops = Array(columns).fill(0);
 
     function drawMatrix() {
         ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
@@ -1216,15 +1402,21 @@
         ctx.globalAlpha = 1;
     }
 
-    function animateMatrix() {
-        drawMatrix();
+    // ~30fps, paused when the tab is hidden; skipped for reduced-motion users
+    let lastDraw = 0;
+    function animateMatrix(ts) {
+        if (!document.hidden && (ts - lastDraw) >= 33) { lastDraw = ts; drawMatrix(); }
         requestAnimationFrame(animateMatrix);
     }
-    animateMatrix();
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) requestAnimationFrame(animateMatrix);
 
+    let lastW = window.innerWidth;
     window.addEventListener('resize', () => {
+        if (window.innerWidth === lastW) return; // ignore mobile address-bar height changes
+        lastW = window.innerWidth;
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
+        drops = Array(Math.floor(canvas.width / fontSize)).fill(0);
     });
 
     // ── Navbar Scroll Effect ──
@@ -1235,7 +1427,7 @@
         } else {
             navbar.classList.remove('scrolled');
         }
-    });
+    }, { passive: true });
 
     // ── Scroll Reveal Animation ──
     const reveals = document.querySelectorAll('.reveal');
@@ -1261,6 +1453,7 @@
         autoplay: {
             delay: 5000,
             disableOnInteraction: false,
+            pauseOnMouseEnter: true,
         },
         pagination: {
             el: '.swiper-pagination',
@@ -1282,16 +1475,24 @@
         },
     });
 
-    // ── FAQ Accordion ──
+    // ── FAQ Accordion (keyboard + screen-reader accessible) ──
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
-        question.addEventListener('click', () => {
+        const toggle = () => {
             const isOpen = item.classList.contains('open');
-            faqItems.forEach(i => i.classList.remove('open'));
+            faqItems.forEach(i => {
+                i.classList.remove('open');
+                i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            });
             if (!isOpen) {
                 item.classList.add('open');
+                question.setAttribute('aria-expanded', 'true');
             }
+        };
+        question.addEventListener('click', toggle);
+        question.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
         });
     });
 
@@ -1308,6 +1509,19 @@
             }
         });
     });
+    // ── Footer year ──
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // ── Card border animation (runs only while a card is visible) ──
+    (function () {
+        const cards = document.querySelectorAll('.service-card, .tech-card, .platform-card, .faq-item');
+        if (!('IntersectionObserver' in window)) { cards.forEach(c => c.classList.add('cn-live')); return; }
+        const io = new IntersectionObserver(entries => {
+            entries.forEach(en => en.target.classList.toggle('cn-live', en.isIntersecting));
+        }, { rootMargin: '50px' });
+        cards.forEach(c => io.observe(c));
+    })();
 </script>
 
 </body>
