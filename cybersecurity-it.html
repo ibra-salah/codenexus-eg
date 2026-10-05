@@ -3,26 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#000000">
+    <meta name="color-scheme" content="dark">
     <meta name="description" content="Code Nexus Egypt CyberSecurity & IT Services — Penetration testing, vulnerability assessment, network security and IT infrastructure solutions in Mansoura, Egypt.">
-    <meta name="keywords" content="Code Nexus cybersecurity, Code Nexus Egypt IT, cyber security Egypt, penetration testing Egypt, network security Mansoura, IT infrastructure Egypt, كود نيكسس امن سيبراني, امن سيبراني مصر, حماية شبكات, اختبار اختراق مصر">
     <link rel="canonical" href="https://codenexus-eg.com/cybersecurity-it">
     <meta property="og:title" content="CyberSecurity & IT — Code Nexus Egypt">
     <meta property="og:description" content="Professional cybersecurity and IT services in Egypt. Penetration testing, network security, and IT infrastructure solutions by Code Nexus Egypt.">
     <meta property="og:url" content="https://codenexus-eg.com/cybersecurity-it">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://i.postimg.cc/VL2Q2xgS/Picsart-26-06-05-16-20-01-744.png">
+    <meta property="og:image" content="https://i.postimg.cc/sXvpKfvN/Picsart-25-11-16-03-03-27-354.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="CyberSecurity & IT - Code Nexus Egypt">
+    <meta property="og:site_name" content="Code Nexus">
+    <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://i.postimg.cc/sXvpKfvN/Picsart-25-11-16-03-03-27-354.png">
+    <meta name="twitter:image:alt" content="CyberSecurity & IT - Code Nexus Egypt">
     <meta name="twitter:title" content="CyberSecurity & IT — Code Nexus Egypt">
     <meta name="twitter:description" content="Professional cybersecurity and IT services in Egypt by Code Nexus.">
     <title>CyberSecurity & IT — Code Nexus Egypt | كود نيكسس</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://i.postimg.cc/VL2Q2xgS/Picsart-26-06-05-16-20-01-744.png">
+    <link rel="apple-touch-icon" href="https://i.postimg.cc/VL2Q2xgS/Picsart-26-06-05-16-20-01-744.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    <link rel="preconnect" href="https://i.postimg.cc">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
 <style>
     :root {
@@ -246,7 +261,6 @@
         background: var(--card-bg); border: 1px solid var(--card-border);
         border-radius: 14px; padding: 34px 26px; text-align: center;
         transition: var(--transition); position: relative; overflow: hidden;
-        will-change: transform;
     }
     .platform-card::before {
         content: ''; position: absolute; top: 0; left: -100%;
@@ -278,7 +292,7 @@
     .service-card {
         background: var(--card-bg); border: 1px solid var(--card-border);
         border-radius: 12px; padding: 28px 24px;
-        transition: var(--transition); position: relative; overflow: hidden; will-change: transform;
+        transition: var(--transition); position: relative; overflow: hidden;
     }
     .service-card::before {
         content: ''; position: absolute; top: 0; left: -100%;
@@ -306,7 +320,7 @@
     .tech-card {
         background: var(--card-bg); border: 1px solid var(--card-border);
         border-radius: 10px; padding: 22px 18px; text-align: center;
-        transition: var(--transition); will-change: transform;
+        transition: var(--transition);
     }
     .tech-card:hover { transform: translateY(-6px); border-color: var(--card-border-hover); box-shadow: var(--card-shadow); }
     .tech-card i { font-size: 2.2rem; margin-bottom: 10px; display: block; }
@@ -426,7 +440,6 @@
         padding: 40px 0 28px;
         border-top: 1px solid rgba(255,255,255,0.07);
         text-align: center;
-        backdrop-filter: blur(10px);
     }
     .footer-content {
         display: flex;
@@ -569,22 +582,152 @@
         *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.1ms !important; }
         .reveal { opacity: 1 !important; transform: none !important; }
     }
+
+/* ── Top contact bar (shared with homepage) ── */
+:root{--topbar-h:34px}
+body{padding-top:var(--topbar-h)}
+.topbar{position:fixed;top:0;left:0;width:100%;height:var(--topbar-h);background:#05050a;border-bottom:1px solid rgba(0,148,255,0.18);z-index:1001;font-size:0.82rem}
+.topbar-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.topbar-info{display:flex;align-items:center;gap:20px;min-width:0}
+.topbar a{color:#bbb;text-decoration:none;transition:color .3s ease;white-space:nowrap}
+.topbar a:hover,.topbar a:focus-visible{color:#0094FF}
+.topbar-item{display:inline-flex;align-items:center;gap:7px}
+.topbar-item i{color:#FF8A00;font-size:0.78rem}
+.topbar-social{display:flex;align-items:center;gap:4px;flex-shrink:0}
+.topbar-social a{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem}
+.topbar-social a:hover{background:rgba(0,148,255,0.15)}
+.navbar{top:var(--topbar-h)}
+section[id]{scroll-margin-top:calc(var(--topbar-h) + 70px)}
+@media (max-width:767.98px){:root{--topbar-h:32px}.topbar-item.tb-loc,.topbar-item.tb-mail{display:none}}
+@media (max-width:575.98px){.topbar{font-size:0.78rem}.topbar-info{gap:10px}.topbar-social{gap:0}.topbar-social a{width:24px;height:24px}}
+/* ── Running-light card border (same effect as homepage) ── */
+@property --cn-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+@keyframes cnBorderSpin{to{--cn-angle:360deg}}
+.service-card,.tech-card,.platform-card,.faq-item{position:relative}
+.service-card::after,.tech-card::after,.platform-card::after,.faq-item::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:2px;pointer-events:none;z-index:3;opacity:0;background:conic-gradient(from var(--cn-angle),transparent 0 62%,rgba(24,160,251,0.15) 70%,#18A0FB 88%,#FF8A00 100%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+.service-card.cn-live::after,.tech-card.cn-live::after,.platform-card.cn-live::after,.faq-item.cn-live::after{opacity:1;animation:cnBorderSpin 4.5s linear infinite}
+@media (prefers-reduced-motion:reduce){.cn-live::after{animation:none!important;opacity:0!important}}
+.faq-question:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:3px}
 </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://codenexus-eg.com/cybersecurity-it#service",
+      "name": "CyberSecurity & IT",
+      "serviceType": "CyberSecurity & IT",
+      "description": "Code Nexus Egypt CyberSecurity & IT Services — Penetration testing, vulnerability assessment, network security and IT infrastructure solutions in Mansoura, Egypt.",
+      "url": "https://codenexus-eg.com/cybersecurity-it",
+      "areaServed": "EG",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://codenexus-eg.com/#organization",
+        "name": "Code Nexus",
+        "url": "https://codenexus-eg.com/",
+        "telephone": "+201097422920",
+        "email": "code.nexus.hack@gmail.com"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://codenexus-eg.com/cybersecurity-it#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://codenexus-eg.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "CyberSecurity & IT",
+          "item": "https://codenexus-eg.com/cybersecurity-it"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://codenexus-eg.com/cybersecurity-it#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is penetration testing legal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — when conducted with written authorization from the system owner. We always begin with a formal scope agreement that defines the targets, testing boundaries, and rules of engagement. Ethical hacking with proper authorization is fully legal and is standard practice worldwide."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a penetration test take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on scope. A basic web application test typically takes 2–5 days. A full infrastructure assessment can take 1–3 weeks. We provide a clear timeline and milestone plan before starting any engagement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will the testing affect my live systems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We take every precaution to minimize disruption. Testing is conducted carefully with agreed-upon safe hours, and we coordinate with your team throughout. In most cases, systems continue operating normally during the engagement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does the final report include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our reports include an executive summary for stakeholders, a full technical breakdown of all findings, CVSS risk ratings for each vulnerability, proof-of-concept evidence, and step-by-step remediation recommendations. We also offer a debrief call to walk through the findings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer ongoing security monitoring?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Our Enterprise package includes continuous threat monitoring, quarterly assessments, and a dedicated security advisor. We also offer standalone monitoring retainers for businesses that need ongoing protection between formal assessments."
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
 </head>
 <body>
 
 <canvas id="matrix" class="matrix-bg" aria-hidden="true"></canvas>
 <div class="matrix-overlay" aria-hidden="true"></div>
 
+<div class="topbar" id="topbar">
+    <div class="container topbar-inner">
+        <div class="topbar-info">
+            <a class="topbar-item" href="tel:+201097422920" aria-label="Call Code Nexus"><i class="fas fa-phone-alt" aria-hidden="true"></i><span>01097422920</span></a>
+            <a class="topbar-item tb-mail" href="mailto:code.nexus.hack@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i><span>code.nexus.hack@gmail.com</span></a>
+            <span class="topbar-item tb-loc"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Mansoura, Dakahlia, Egypt</span></span>
+        </div>
+        <div class="topbar-social">
+            <a href="https://wa.me/201097422920" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/share/18kKSwDE6Z/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/codenexus_eg?igsh=OWhnZTFkeHhmcWQw" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@codenexus_eg?is_from_webapp=1&amp;sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </div>
+</div>
+
 <!-- NAVBAR -->
-<nav class="navbar" id="navbar">
+<nav class="navbar" id="navbar" aria-label="Main navigation">
     <div class="container nav-container">
         <div class="logo">
-            <a href="index.html">
+            <a href="/">
                 <img src="https://i.postimg.cc/3J1QqwvZ/xz.png" alt="Code Nexus" height="40">
             </a>
         </div>
-        <a href="index.html" class="nav-back">
+        <a href="/" class="nav-back">
             <i class="fas fa-arrow-left"></i> Back to Home
         </a>
     </div>
@@ -602,7 +745,7 @@
         <h1>Secure Systems.<br>Protected Data.</h1>
         <p>From penetration testing to full IT infrastructure management — we identify vulnerabilities, harden your systems, and keep your digital assets secure around the clock.</p>
         <div class="hero-btns">
-            <a href="index.html#contact" class="btn btn-primary">Start Your Audit</a>
+            <a href="/#contact" class="btn btn-primary">Start Your Audit</a>
             <a href="#services" class="btn btn-secondary">View Our Services</a>
         </div>
         <div class="hero-stats">
@@ -633,7 +776,7 @@
         </div>
         <div class="showcase-container">
             <div class="showcase-frame">
-                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1400&q=80" alt="CyberSecurity Operations">
+                <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1400&q=80" alt="CyberSecurity Operations">
                 <div class="showcase-caption">
                     <h3>Real-Time Threat Monitoring</h3>
                     <p>24/7 protection across your entire digital infrastructure</p>
@@ -743,42 +886,42 @@
         <div class="tech-grid">
             <div class="tech-card reveal">
                 <i class="fas fa-terminal icon-kali"></i>
-                <h4>Kali Linux</h4>
+                <h4 aria-level="3">Kali Linux</h4>
                 <p>Pen testing OS</p>
             </div>
             <div class="tech-card reveal">
                 <i class="fas fa-spider icon-meta"></i>
-                <h4>Metasploit</h4>
+                <h4 aria-level="3">Metasploit</h4>
                 <p>Exploit framework</p>
             </div>
             <div class="tech-card reveal">
                 <i class="fas fa-wifi icon-wire"></i>
-                <h4>Wireshark</h4>
+                <h4 aria-level="3">Wireshark</h4>
                 <p>Network analysis</p>
             </div>
             <div class="tech-card reveal">
                 <i class="fas fa-search icon-nmap"></i>
-                <h4>Nmap</h4>
+                <h4 aria-level="3">Nmap</h4>
                 <p>Network scanner</p>
             </div>
             <div class="tech-card reveal">
                 <i class="fas fa-bug icon-burp"></i>
-                <h4>Burp Suite</h4>
+                <h4 aria-level="3">Burp Suite</h4>
                 <p>Web app testing</p>
             </div>
             <div class="tech-card reveal">
                 <i class="fas fa-database icon-sql"></i>
-                <h4>SQLMap</h4>
+                <h4 aria-level="3">SQLMap</h4>
                 <p>SQL injection</p>
             </div>
             <div class="tech-card reveal">
                 <i class="fas fa-shield-alt icon-zap"></i>
-                <h4>OWASP ZAP</h4>
+                <h4 aria-level="3">OWASP ZAP</h4>
                 <p>Security scanning</p>
             </div>
             <div class="tech-card reveal">
                 <i class="fas fa-lock icon-hash"></i>
-                <h4>Hashcat</h4>
+                <h4 aria-level="3">Hashcat</h4>
                 <p>Password auditing</p>
             </div>
         </div>
@@ -797,27 +940,27 @@
         <div class="process-steps">
             <div class="step reveal">
                 <div class="step-num">01</div>
-                <h4>Scoping</h4>
+                <h4 aria-level="3">Scoping</h4>
                 <p>We define the scope, targets, and rules of engagement through a formal agreement.</p>
             </div>
             <div class="step reveal">
                 <div class="step-num">02</div>
-                <h4>Reconnaissance</h4>
+                <h4 aria-level="3">Reconnaissance</h4>
                 <p>Passive and active information gathering to map the entire attack surface.</p>
             </div>
             <div class="step reveal">
                 <div class="step-num">03</div>
-                <h4>Testing</h4>
+                <h4 aria-level="3">Testing</h4>
                 <p>Controlled exploitation of discovered vulnerabilities using ethical hacking techniques.</p>
             </div>
             <div class="step reveal">
                 <div class="step-num">04</div>
-                <h4>Reporting</h4>
+                <h4 aria-level="3">Reporting</h4>
                 <p>Detailed report with findings, risk ratings, evidence, and clear remediation steps.</p>
             </div>
             <div class="step reveal">
                 <div class="step-num">05</div>
-                <h4>Remediation</h4>
+                <h4 aria-level="3">Remediation</h4>
                 <p>We help fix the issues, re-test, and provide ongoing support to keep you protected.</p>
             </div>
         </div>
@@ -835,7 +978,7 @@
         </div>
         <div class="faq-list">
             <div class="faq-item">
-                <div class="faq-question">
+                <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
                     Is penetration testing legal?
                     <i class="fas fa-chevron-down"></i>
                 </div>
@@ -844,7 +987,7 @@
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">
+                <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
                     How long does a penetration test take?
                     <i class="fas fa-chevron-down"></i>
                 </div>
@@ -853,7 +996,7 @@
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">
+                <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
                     Will the testing affect my live systems?
                     <i class="fas fa-chevron-down"></i>
                 </div>
@@ -862,7 +1005,7 @@
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">
+                <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
                     What does the final report include?
                     <i class="fas fa-chevron-down"></i>
                 </div>
@@ -871,7 +1014,7 @@
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">
+                <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
                     Do you offer ongoing security monitoring?
                     <i class="fas fa-chevron-down"></i>
                 </div>
@@ -894,22 +1037,22 @@
             </div>
         </div>
         <div class="footer-cta-btns">
-            <a href="https://wa.me/201097422920?text=Hello%20Code%20Nexus%2C%20I%20would%20like%20to%20request%20this%20service%20and%20learn%20more%20about%20your%20solutions." 
+            <a href="https://wa.me/201097422920?text=Hello%20Code%20Nexus%2C%20I%20would%20like%20to%20request%20the%20CyberSecurity%20%26%20IT%20service%20and%20learn%20more%20about%20your%20solutions." 
                class="footer-btn footer-btn-wa" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-whatsapp"></i>
                 Request This Service
             </a>
-            <a href="index.html#contact" class="footer-btn footer-btn-start">
+            <a href="/#contact" class="footer-btn footer-btn-start">
                 <i class="fas fa-rocket"></i>
                 Get Started
             </a>
         </div>
-        <p>&copy; 2024 Code Nexus. All rights reserved. | <a href="index.html">Back to Home</a></p>
+        <p>&copy; <span id="year">2026</span> Code Nexus. All rights reserved. | <a href="/">Back to Home</a></p>
     </div>
 </footer>
 
 <!-- Floating WhatsApp Button -->
-<a href="https://wa.me/201097422920" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
+<a href="https://wa.me/201097422920?text=Hello%20Code%20Nexus%2C%20I%20would%20like%20to%20request%20the%20CyberSecurity%20%26%20IT%20service%20and%20learn%20more%20about%20your%20solutions." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Code Nexus on WhatsApp" title="Chat with us on WhatsApp">
     <i class="fab fa-whatsapp"></i>
 </a>
 
@@ -923,7 +1066,7 @@
     const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
     const fontSize = 16;
     const columns = Math.floor(canvas.width / fontSize);
-    const drops = Array(columns).fill(0);
+    let drops = Array(columns).fill(0);
 
     function drawMatrix() {
         ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
@@ -943,15 +1086,21 @@
         ctx.globalAlpha = 1;
     }
 
-    function animateMatrix() {
-        drawMatrix();
+    // ~30fps, paused when the tab is hidden; skipped for reduced-motion users
+    let lastDraw = 0;
+    function animateMatrix(ts) {
+        if (!document.hidden && (ts - lastDraw) >= 33) { lastDraw = ts; drawMatrix(); }
         requestAnimationFrame(animateMatrix);
     }
-    animateMatrix();
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) requestAnimationFrame(animateMatrix);
 
+    let lastW = window.innerWidth;
     window.addEventListener('resize', () => {
+        if (window.innerWidth === lastW) return; // ignore mobile address-bar height changes
+        lastW = window.innerWidth;
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
+        drops = Array(Math.floor(canvas.width / fontSize)).fill(0);
     });
 
     // ── Navbar Scroll Effect ──
@@ -962,7 +1111,7 @@
         } else {
             navbar.classList.remove('scrolled');
         }
-    });
+    }, { passive: true });
 
     // ── Scroll Reveal Animation ──
     const reveals = document.querySelectorAll('.reveal');
@@ -982,16 +1131,24 @@
 
     reveals.forEach(reveal => revealOnScroll.observe(reveal));
 
-    // ── FAQ Accordion ──
+    // ── FAQ Accordion (keyboard + screen-reader accessible) ──
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
-        question.addEventListener('click', () => {
+        const toggle = () => {
             const isOpen = item.classList.contains('open');
-            faqItems.forEach(i => i.classList.remove('open'));
+            faqItems.forEach(i => {
+                i.classList.remove('open');
+                i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            });
             if (!isOpen) {
                 item.classList.add('open');
+                question.setAttribute('aria-expanded', 'true');
             }
+        };
+        question.addEventListener('click', toggle);
+        question.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
         });
     });
 
@@ -1008,6 +1165,19 @@
             }
         });
     });
+    // ── Footer year ──
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // ── Card border animation (runs only while a card is visible) ──
+    (function () {
+        const cards = document.querySelectorAll('.service-card, .tech-card, .platform-card, .faq-item');
+        if (!('IntersectionObserver' in window)) { cards.forEach(c => c.classList.add('cn-live')); return; }
+        const io = new IntersectionObserver(entries => {
+            entries.forEach(en => en.target.classList.toggle('cn-live', en.isIntersecting));
+        }, { rootMargin: '50px' });
+        cards.forEach(c => io.observe(c));
+    })();
 </script>
 
 </body>
