@@ -3,29 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#000000">
+    <meta name="color-scheme" content="dark">
     <meta name="description" content="Code Nexus Egypt Application Development — Professional iOS, Android & cross-platform mobile app development built to perform. Expert app developers in Mansoura, Egypt.">
-    <meta name="keywords" content="Code Nexus app development, mobile app development Egypt, iOS app development Egypt, Android app development Egypt, cross platform app Mansoura, كود نيكسس تطوير تطبيقات, تطوير تطبيقات مصر, برمجة تطبيقات موبايل, تطبيقات ايفون اندرويد مصر">
     <link rel="canonical" href="https://codenexus-eg.com/application-development">
     <meta property="og:title" content="Application Development — Code Nexus Egypt">
     <meta property="og:description" content="Professional iOS, Android & cross-platform mobile app development in Egypt by Code Nexus Egypt team in Mansoura.">
     <meta property="og:url" content="https://codenexus-eg.com/application-development">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://i.postimg.cc/VL2Q2xgS/Picsart-26-06-05-16-20-01-744.png">
+    <meta property="og:image" content="https://i.postimg.cc/sXvpKfvN/Picsart-25-11-16-03-03-27-354.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Application Development - Code Nexus Egypt">
+    <meta property="og:site_name" content="Code Nexus">
+    <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://i.postimg.cc/sXvpKfvN/Picsart-25-11-16-03-03-27-354.png">
+    <meta name="twitter:image:alt" content="Application Development - Code Nexus Egypt">
     <meta name="twitter:title" content="Application Development — Code Nexus Egypt">
     <meta name="twitter:description" content="Professional mobile app development services in Egypt by Code Nexus.">
     <title>Application Development — Code Nexus Egypt | كود نيكسس</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://i.postimg.cc/VL2Q2xgS/Picsart-26-06-05-16-20-01-744.png">
+    <link rel="apple-touch-icon" href="https://i.postimg.cc/VL2Q2xgS/Picsart-26-06-05-16-20-01-744.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    <link rel="preconnect" href="https://i.postimg.cc">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <!-- Swiper CSS for Slider -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.css" integrity="sha384-gAPqlBuTCdtVcYt9ocMOYWrnBZ4XSL6q+4eXqwNycOr4iFczhNKtnYhF3NEXJM51" crossorigin="anonymous">
 
 <style>
     :root {
@@ -238,7 +253,6 @@
         border-radius: 50%;
         transition: all 0.3s ease-in-out;
         border: 1px solid rgba(0, 148, 255, 0.3);
-        backdrop-filter: blur(8px);
         top: 50%;
         transform: translateY(-50%);
         margin-top: 0;
@@ -298,7 +312,6 @@
         background: var(--card-bg); border: 1px solid var(--card-border);
         border-radius: 14px; padding: 34px 26px; text-align: center;
         transition: var(--transition); position: relative; overflow: hidden;
-        will-change: transform;
     }
     .platform-card::before {
         content: ''; position: absolute; top: 0; left: -100%;
@@ -330,7 +343,7 @@
     .service-card {
         background: var(--card-bg); border: 1px solid var(--card-border);
         border-radius: 12px; padding: 28px 24px;
-        transition: var(--transition); position: relative; overflow: hidden; will-change: transform;
+        transition: var(--transition); position: relative; overflow: hidden;
     }
     .service-card::before {
         content: ''; position: absolute; top: 0; left: -100%;
@@ -358,7 +371,7 @@
     .tech-card {
         background: var(--card-bg); border: 1px solid var(--card-border);
         border-radius: 10px; padding: 22px 18px; text-align: center;
-        transition: var(--transition); will-change: transform;
+        transition: var(--transition);
     }
     .tech-card:hover { transform: translateY(-6px); border-color: var(--card-border-hover); box-shadow: var(--card-shadow); }
     .tech-card i { font-size: 2.2rem; margin-bottom: 10px; display: block; }
@@ -478,7 +491,6 @@
         padding: 40px 0 28px;
         border-top: 1px solid rgba(255,255,255,0.07);
         text-align: center;
-        backdrop-filter: blur(10px);
     }
     .footer-content {
         display: flex;
@@ -622,22 +634,152 @@
         *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.1ms !important; }
         .reveal { opacity: 1 !important; transform: none !important; }
     }
+
+/* ── Top contact bar (shared with homepage) ── */
+:root{--topbar-h:34px}
+body{padding-top:var(--topbar-h)}
+.topbar{position:fixed;top:0;left:0;width:100%;height:var(--topbar-h);background:#05050a;border-bottom:1px solid rgba(0,148,255,0.18);z-index:1001;font-size:0.82rem}
+.topbar-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.topbar-info{display:flex;align-items:center;gap:20px;min-width:0}
+.topbar a{color:#bbb;text-decoration:none;transition:color .3s ease;white-space:nowrap}
+.topbar a:hover,.topbar a:focus-visible{color:#0094FF}
+.topbar-item{display:inline-flex;align-items:center;gap:7px}
+.topbar-item i{color:#FF8A00;font-size:0.78rem}
+.topbar-social{display:flex;align-items:center;gap:4px;flex-shrink:0}
+.topbar-social a{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem}
+.topbar-social a:hover{background:rgba(0,148,255,0.15)}
+.navbar{top:var(--topbar-h)}
+section[id]{scroll-margin-top:calc(var(--topbar-h) + 70px)}
+@media (max-width:767.98px){:root{--topbar-h:32px}.topbar-item.tb-loc,.topbar-item.tb-mail{display:none}}
+@media (max-width:575.98px){.topbar{font-size:0.78rem}.topbar-info{gap:10px}.topbar-social{gap:0}.topbar-social a{width:24px;height:24px}}
+/* ── Running-light card border (same effect as homepage) ── */
+@property --cn-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+@keyframes cnBorderSpin{to{--cn-angle:360deg}}
+.service-card,.tech-card,.platform-card,.faq-item{position:relative}
+.service-card::after,.tech-card::after,.platform-card::after,.faq-item::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:2px;pointer-events:none;z-index:3;opacity:0;background:conic-gradient(from var(--cn-angle),transparent 0 62%,rgba(24,160,251,0.15) 70%,#18A0FB 88%,#FF8A00 100%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+.service-card.cn-live::after,.tech-card.cn-live::after,.platform-card.cn-live::after,.faq-item.cn-live::after{opacity:1;animation:cnBorderSpin 4.5s linear infinite}
+@media (prefers-reduced-motion:reduce){.cn-live::after{animation:none!important;opacity:0!important}}
+.faq-question:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:3px}
 </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://codenexus-eg.com/application-development#service",
+      "name": "Application Development",
+      "serviceType": "Application Development",
+      "description": "Code Nexus Egypt Application Development — Professional iOS, Android & cross-platform mobile app development built to perform. Expert app developers in Mansoura, Egypt.",
+      "url": "https://codenexus-eg.com/application-development",
+      "areaServed": "EG",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://codenexus-eg.com/#organization",
+        "name": "Code Nexus",
+        "url": "https://codenexus-eg.com/",
+        "telephone": "+201097422920",
+        "email": "code.nexus.hack@gmail.com"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://codenexus-eg.com/application-development#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://codenexus-eg.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Application Development",
+          "item": "https://codenexus-eg.com/application-development"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://codenexus-eg.com/application-development#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long does it take to build a mobile app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A simple MVP can be ready in 4–6 weeks. A full-featured professional app typically takes 8–14 weeks, and complex enterprise apps may take 3–6 months. We provide a detailed timeline during the discovery phase."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I build a native or cross-platform app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cross-platform (Flutter or React Native) is ideal for most businesses — it saves cost and time while delivering near-native performance. Native development is recommended for apps requiring advanced hardware access or peak performance, like games or camera-heavy apps."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you handle App Store and Play Store submission?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We manage the entire submission process for both stores, including preparing screenshots, descriptions, ASO metadata, and handling any review feedback from Apple or Google."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will my app work offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, if required. We can implement local data caching and offline mode so your users can continue using core features without an internet connection, syncing data when connectivity is restored."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens after the app is launched?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We provide post-launch support covering bug fixes, OS update compatibility, performance monitoring, and feature enhancements. All packages include a support period, and we offer extended maintenance contracts as well."
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
 </head>
 <body>
 
 <canvas id="matrix" class="matrix-bg" aria-hidden="true"></canvas>
 <div class="matrix-overlay" aria-hidden="true"></div>
 
+<div class="topbar" id="topbar">
+    <div class="container topbar-inner">
+        <div class="topbar-info">
+            <a class="topbar-item" href="tel:+201097422920" aria-label="Call Code Nexus"><i class="fas fa-phone-alt" aria-hidden="true"></i><span>01097422920</span></a>
+            <a class="topbar-item tb-mail" href="mailto:code.nexus.hack@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i><span>code.nexus.hack@gmail.com</span></a>
+            <span class="topbar-item tb-loc"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Mansoura, Dakahlia, Egypt</span></span>
+        </div>
+        <div class="topbar-social">
+            <a href="https://wa.me/201097422920" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/share/18kKSwDE6Z/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/codenexus_eg?igsh=OWhnZTFkeHhmcWQw" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@codenexus_eg?is_from_webapp=1&amp;sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </div>
+</div>
+
 <!-- NAVBAR -->
-<nav class="navbar" id="navbar">
+<nav class="navbar" id="navbar" aria-label="Main navigation">
     <div class="container nav-container">
         <div class="logo">
-            <a href="index.html">
+            <a href="/">
                 <img src="https://i.postimg.cc/3J1QqwvZ/xz.png" alt="Code Nexus" height="40">
             </a>
         </div>
-        <a href="index.html" class="nav-back">
+        <a href="/" class="nav-back">
             <i class="fas fa-arrow-left"></i> Back to Home
         </a>
     </div>
@@ -655,7 +797,7 @@
         <h1>Mobile Apps Built<br>For Performance</h1>
         <p>From iOS and Android to cross-platform solutions — we develop high-performance mobile applications that engage users and drive business growth.</p>
         <div class="hero-btns">
-            <a href="index.html#contact" class="btn btn-primary">Start Your App</a>
+            <a href="/#contact" class="btn btn-primary">Start Your App</a>
             <a href="#portfolio" class="btn btn-secondary">View Our Apps</a>
         </div>
         <div class="hero-stats">
@@ -698,7 +840,7 @@
                         </div>
                         <!-- Project 2 -->
                         <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/cHTdxjrk/a4.png" alt="Duvdu">
+                            <img loading="lazy" decoding="async" src="https://i.postimg.cc/cHTdxjrk/a4.png" alt="Duvdu">
                             <div class="slide-caption">
                                 <h3>Duvdu</h3>
                                 <p>Social networking & community app</p>
@@ -706,7 +848,7 @@
                         </div>
                         <!-- Project 3 -->
                         <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/hj4q5rpt/a3.png" alt="Discount Emy">
+                            <img loading="lazy" decoding="async" src="https://i.postimg.cc/hj4q5rpt/a3.png" alt="Discount Emy">
                             <div class="slide-caption">
                                 <h3>Discount Emy</h3>
                                 <p>E-commerce & discount platform</p>
@@ -714,7 +856,7 @@
                         </div>
                         <!-- Project 4 -->
                         <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/cJmpw3Zj/a5.png" alt="Govet">
+                            <img loading="lazy" decoding="async" src="https://i.postimg.cc/cJmpw3Zj/a5.png" alt="Govet">
                             <div class="slide-caption">
                                 <h3>Govet</h3>
                                 <p>Government services application</p>
@@ -722,7 +864,7 @@
                         </div>
                         <!-- Project 5 -->
                         <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/fR7pQd32/a6.png" alt="M3lesh">
+                            <img loading="lazy" decoding="async" src="https://i.postimg.cc/fR7pQd32/a6.png" alt="M3lesh">
                             <div class="slide-caption">
                                 <h3>M3lesh</h3>
                                 <p>Lifestyle & wellness platform</p>
@@ -730,7 +872,7 @@
                         </div>
                         <!-- Project 6 -->
                         <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/cHz5BMzP/a7.png" alt="M6lob">
+                            <img loading="lazy" decoding="async" src="https://i.postimg.cc/cHz5BMzP/a7.png" alt="M6lob">
                             <div class="slide-caption">
                                 <h3>M6lob</h3>
                                 <p>Request & booking service app</p>
@@ -738,7 +880,7 @@
                         </div>
                         <!-- Project 7 -->
                         <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/vZMMnbfh/a8.png" alt="Taskaty">
+                            <img loading="lazy" decoding="async" src="https://i.postimg.cc/vZMMnbfh/a8.png" alt="Taskaty">
                             <div class="slide-caption">
                                 <h3>Taskaty</h3>
                                 <p>Task management & productivity</p>
@@ -746,7 +888,7 @@
                         </div>
                         <!-- Project 8 -->
                         <div class="swiper-slide">
-                            <img src="https://i.postimg.cc/q7vTmwm3/a9.png" alt="Teb & Aafya">
+                            <img loading="lazy" decoding="async" src="https://i.postimg.cc/q7vTmwm3/a9.png" alt="Teb & Aafya">
                             <div class="slide-caption">
                                 <h3>Teb & Aafya</h3>
                                 <p>Healthcare & wellness platform</p>
@@ -864,42 +1006,42 @@
         <div class="tech-grid">
             <div class="tech-card reveal">
                 <i class="fas fa-mobile icon-flutter"></i>
-                <h4>Flutter</h4>
+                <h4 aria-level="3">Flutter</h4>
                 <p>Cross-platform UI</p>
             </div>
             <div class="tech-card reveal">
                 <i class="fab fa-react icon-react-n"></i>
-                <h4>React Native</h4>
+                <h4 aria-level="3">React Native</h4>
                 <p>JS mobile apps</p>
             </div>
             <div class="tech-card reveal">
                 <i class="fab fa-apple icon-swift"></i>
-                <h4>Swift</h4>
+                <h4 aria-level="3">Swift</h4>
                 <p>iOS native</p>
             </div>
             <div class="tech-card reveal">
                 <i class="fab fa-android icon-kotlin"></i>
-                <h4>Kotlin</h4>
+                <h4 aria-level="3">Kotlin</h4>
                 <p>Android native</p>
             </div>
             <div class="tech-card reveal">
                 <i class="fas fa-fire icon-firebase"></i>
-                <h4>Firebase</h4>
+                <h4 aria-level="3">Firebase</h4>
                 <p>Backend & auth</p>
             </div>
             <div class="tech-card reveal">
                 <i class="fab fa-figma icon-figma"></i>
-                <h4>Figma</h4>
+                <h4 aria-level="3">Figma</h4>
                 <p>UI/UX design</p>
             </div>
             <div class="tech-card reveal">
                 <i class="fab fa-node-js icon-node2"></i>
-                <h4>Node.js</h4>
+                <h4 aria-level="3">Node.js</h4>
                 <p>API development</p>
             </div>
             <div class="tech-card reveal">
                 <i class="fab fa-git-alt icon-git"></i>
-                <h4>Git</h4>
+                <h4 aria-level="3">Git</h4>
                 <p>Version control</p>
             </div>
         </div>
@@ -918,27 +1060,27 @@
         <div class="process-steps">
             <div class="step reveal">
                 <div class="step-num">01</div>
-                <h4>Discovery</h4>
+                <h4 aria-level="3">Discovery</h4>
                 <p>We define your app's goals, target users, and core features through a structured brief.</p>
             </div>
             <div class="step reveal">
                 <div class="step-num">02</div>
-                <h4>Design</h4>
+                <h4 aria-level="3">Design</h4>
                 <p>Wireframes and interactive prototypes are created and refined until you're satisfied.</p>
             </div>
             <div class="step reveal">
                 <div class="step-num">03</div>
-                <h4>Development</h4>
+                <h4 aria-level="3">Development</h4>
                 <p>Agile sprints deliver a fully functional app with regular progress updates.</p>
             </div>
             <div class="step reveal">
                 <div class="step-num">04</div>
-                <h4>Testing</h4>
+                <h4 aria-level="3">Testing</h4>
                 <p>Thorough QA across devices and OS versions — performance, security, and UX tested.</p>
             </div>
             <div class="step reveal">
                 <div class="step-num">05</div>
-                <h4>Launch</h4>
+                <h4 aria-level="3">Launch</h4>
                 <p>Store submission, go-live support, and monitoring to ensure a smooth launch.</p>
             </div>
         </div>
@@ -956,7 +1098,7 @@
         </div>
         <div class="faq-list">
             <div class="faq-item">
-                <div class="faq-question">
+                <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
                     How long does it take to build a mobile app?
                     <i class="fas fa-chevron-down"></i>
                 </div>
@@ -965,7 +1107,7 @@
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">
+                <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
                     Should I build a native or cross-platform app?
                     <i class="fas fa-chevron-down"></i>
                 </div>
@@ -974,7 +1116,7 @@
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">
+                <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
                     Do you handle App Store and Play Store submission?
                     <i class="fas fa-chevron-down"></i>
                 </div>
@@ -983,7 +1125,7 @@
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">
+                <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
                     Will my app work offline?
                     <i class="fas fa-chevron-down"></i>
                 </div>
@@ -992,7 +1134,7 @@
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">
+                <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
                     What happens after the app is launched?
                     <i class="fas fa-chevron-down"></i>
                 </div>
@@ -1015,27 +1157,27 @@
             </div>
         </div>
         <div class="footer-cta-btns">
-            <a href="https://wa.me/201097422920?text=Hello%20Code%20Nexus%2C%20I%20would%20like%20to%20request%20this%20service%20and%20learn%20more%20about%20your%20solutions." 
+            <a href="https://wa.me/201097422920?text=Hello%20Code%20Nexus%2C%20I%20would%20like%20to%20request%20the%20Application%20Development%20service%20and%20learn%20more%20about%20your%20solutions." 
                class="footer-btn footer-btn-wa" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-whatsapp"></i>
                 Request This Service
             </a>
-            <a href="index.html#contact" class="footer-btn footer-btn-start">
+            <a href="/#contact" class="footer-btn footer-btn-start">
                 <i class="fas fa-rocket"></i>
                 Get Started
             </a>
         </div>
-        <p>&copy; 2024 Code Nexus. All rights reserved. | <a href="index.html">Back to Home</a></p>
+        <p>&copy; <span id="year">2026</span> Code Nexus. All rights reserved. | <a href="/">Back to Home</a></p>
     </div>
 </footer>
 
 <!-- Floating WhatsApp Button -->
-<a href="https://wa.me/201097422920" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
+<a href="https://wa.me/201097422920?text=Hello%20Code%20Nexus%2C%20I%20would%20like%20to%20request%20the%20Application%20Development%20service%20and%20learn%20more%20about%20your%20solutions." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Code Nexus on WhatsApp" title="Chat with us on WhatsApp">
     <i class="fab fa-whatsapp"></i>
 </a>
 
 <!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
 
 <script>
     // ── Matrix Background Animation ──
@@ -1047,7 +1189,7 @@
     const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
     const fontSize = 16;
     const columns = Math.floor(canvas.width / fontSize);
-    const drops = Array(columns).fill(0);
+    let drops = Array(columns).fill(0);
 
     function drawMatrix() {
         ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
@@ -1067,15 +1209,21 @@
         ctx.globalAlpha = 1;
     }
 
-    function animateMatrix() {
-        drawMatrix();
+    // ~30fps, paused when the tab is hidden; skipped for reduced-motion users
+    let lastDraw = 0;
+    function animateMatrix(ts) {
+        if (!document.hidden && (ts - lastDraw) >= 33) { lastDraw = ts; drawMatrix(); }
         requestAnimationFrame(animateMatrix);
     }
-    animateMatrix();
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) requestAnimationFrame(animateMatrix);
 
+    let lastW = window.innerWidth;
     window.addEventListener('resize', () => {
+        if (window.innerWidth === lastW) return; // ignore mobile address-bar height changes
+        lastW = window.innerWidth;
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
+        drops = Array(Math.floor(canvas.width / fontSize)).fill(0);
     });
 
     // ── Navbar Scroll Effect ──
@@ -1086,7 +1234,7 @@
         } else {
             navbar.classList.remove('scrolled');
         }
-    });
+    }, { passive: true });
 
     // ── Scroll Reveal Animation ──
     const reveals = document.querySelectorAll('.reveal');
@@ -1112,6 +1260,7 @@
         autoplay: {
             delay: 5000,
             disableOnInteraction: false,
+            pauseOnMouseEnter: true,
         },
         pagination: {
             el: '.swiper-pagination',
@@ -1133,16 +1282,24 @@
         },
     });
 
-    // ── FAQ Accordion ──
+    // ── FAQ Accordion (keyboard + screen-reader accessible) ──
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
-        question.addEventListener('click', () => {
+        const toggle = () => {
             const isOpen = item.classList.contains('open');
-            faqItems.forEach(i => i.classList.remove('open'));
+            faqItems.forEach(i => {
+                i.classList.remove('open');
+                i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            });
             if (!isOpen) {
                 item.classList.add('open');
+                question.setAttribute('aria-expanded', 'true');
             }
+        };
+        question.addEventListener('click', toggle);
+        question.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
         });
     });
 
@@ -1159,6 +1316,19 @@
             }
         });
     });
+    // ── Footer year ──
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // ── Card border animation (runs only while a card is visible) ──
+    (function () {
+        const cards = document.querySelectorAll('.service-card, .tech-card, .platform-card, .faq-item');
+        if (!('IntersectionObserver' in window)) { cards.forEach(c => c.classList.add('cn-live')); return; }
+        const io = new IntersectionObserver(entries => {
+            entries.forEach(en => en.target.classList.toggle('cn-live', en.isIntersecting));
+        }, { rootMargin: '50px' });
+        cards.forEach(c => io.observe(c));
+    })();
 </script>
 
 </body>
